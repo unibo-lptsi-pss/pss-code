@@ -1,6 +1,6 @@
 package it.unibo.lifecycle;
 
-class GC {
+public class GC {
 	private static long size = 1000;
 
 	public static void main(String[] s) {

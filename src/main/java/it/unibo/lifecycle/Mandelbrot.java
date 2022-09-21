@@ -11,10 +11,10 @@ public class Mandelbrot {
 		this.maxIter = maxIter;
 	}
 	void advancePosition(){
-		x = (x + 1) % width;
-		y = y + (x == 0 ? 1 : 0);
+		x = (x + 1) % width; // avanza orizzontalmente
+		y = y + (x == 0 ? 1 : 0); // quando abbiamo finito la riga, avanziamo verticalmente
 	}
-	boolean isCompleted(){ return y == height; }
+	boolean isCompleted(){ return y == height; } // abbiamo finito quando abbiamo disegnato tutte le righe
 	int computeIterations(){
 		Complex c0 = new Complex(this.minx + (this.maxx - this.minx) * x / width,
 				                     this.miny + (this.maxy - this.miny) * y / height);

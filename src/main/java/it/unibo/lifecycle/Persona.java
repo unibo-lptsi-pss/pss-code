@@ -1,7 +1,8 @@
 package it.unibo.lifecycle;
 
-class Persona { // dichiarazione classe
-	static int currentYear = new java.util.Date().getYear();
+import java.util.Calendar;
+
+public class Persona { // dichiarazione classe
 	String nome;
 	int annoNascita;
 	boolean sposato;
@@ -23,4 +24,6 @@ class Persona { // dichiarazione classe
 		this.annoNascita = annoNascita;
 		this.sposato = sposato;
 	}
+
+	static int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 }

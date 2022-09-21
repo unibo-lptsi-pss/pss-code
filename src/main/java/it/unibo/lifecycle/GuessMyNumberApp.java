@@ -1,6 +1,5 @@
 package it.unibo.lifecycle;
 
-import java.io.Console; // Classe non funzionante dall'IDE Eclipse
 import java.util.Random;
 
 public class GuessMyNumberApp {

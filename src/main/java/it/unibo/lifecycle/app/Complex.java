@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p04objects.app;
+package it.unibo.lifecycle.app;
 
 public class Complex {
 	
