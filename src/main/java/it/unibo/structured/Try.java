@@ -1,6 +1,6 @@
 package it.unibo.structured;
 
-class Try {
+public class Try {
 	public static void main(String[] s) {
 		System.out.println(10 + 20); // 30
 		System.out.println(010 + 020); // 24
