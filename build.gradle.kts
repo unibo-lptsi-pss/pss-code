@@ -4,6 +4,14 @@ plugins {
     application // -PmainClass=it.unibo.lifecycle.MandelbrotApp runMain
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir("sources")
+        }
+    }
+}
+
 application {
     mainClass.set("it.unibo.lifecycle.MandelbrotApp")
 }
