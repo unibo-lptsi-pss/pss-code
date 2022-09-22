@@ -1,6 +1,5 @@
 package it.unibo.structured;
 
-import java.io.Console;
 import java.util.Random;
 
 public class GuessMyNumberApp {

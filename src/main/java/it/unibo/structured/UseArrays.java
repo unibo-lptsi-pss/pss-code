@@ -16,7 +16,8 @@ public class UseArrays {
 		boolean[] d = new boolean[10000];
 		System.out.println("d[5000]: " + d[5000]); // false
 
-		int[][] e = new int[5][5]; // matrice 5x5 di zeri
+		int[][] e = new int[5][10]; // matrice 5x10 di zeri
+		System.out.println("e.length: " + e.length); // 5
 		
 		int[][] f = new int[][] {  // int[][] f = {{11,12,13,14},{21,22,23,24},....};
 			    new int[] { 11, 12, 13, 14 },
