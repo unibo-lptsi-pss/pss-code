@@ -7,7 +7,10 @@ public class UsePersona {
 		Persona p3 = new Persona("Gino Bianchi", 1979);
 		Persona p4 = new Persona("Carlo Verdi", 1971, true);
 
-		System.out.println(p2.nome + ", nato/a nel " + p2.annoNascita + 
-			(p2.sposato ? "" : ", non") + " è sposato/a.");
+		Persona[] persone = new Persona[]{ p2, p3, p4 };
+		for(int i=0; i<persone.length; i++){
+			System.out.println(persone[i].nome + ", nato/a nel " + persone[i].annoNascita + 
+				(persone[i].sposato ? "" : ", non") + " è sposato/a.");
+		}
 	}
 }
