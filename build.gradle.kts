@@ -1,6 +1,6 @@
 plugins {
     java
-    id("com.github.mrsarm.jshell.plugin") version("1.2.0") // ./gradlew --console plain jshell
+   id("com.github.mrsarm.jshell.plugin") version("1.2.0") // ./gradlew --console plain jshell
     application // -PmainClass=it.unibo.lifecycle.MandelbrotApp runMain
 }
 
@@ -18,9 +18,13 @@ application {
     mainClass.set(project.properties["mainClass"].toString())
 }
 
+repositories {
+    mavenCentral()
+}
+
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.1")
 }
 
 tasks.test {
