@@ -14,7 +14,6 @@ sourceSets {
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 val mainClass: String by project 
