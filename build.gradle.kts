@@ -12,24 +12,27 @@ sourceSets {
     }
 }
 
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
 val mainClass: String by project 
 
 application {
     mainClass.set(project.properties["mainClass"].toString())
 }
 
-repositories {
-    mavenCentral()
-}
+val junitPlatformVersion = "5.9.1"
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitPlatformVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitPlatformVersion")
 }
 
 tasks.test {
     useJUnitPlatform()
     testLogging {
-        events("passed", "skipped", "failed")
-    }
+		events("passed", "skipped", "failed")
+	}
 }
