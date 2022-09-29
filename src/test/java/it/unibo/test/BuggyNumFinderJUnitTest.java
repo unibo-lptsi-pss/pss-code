@@ -14,7 +14,7 @@ public class BuggyNumFinderJUnitTest {
     }
 
     @Test
-    public void someNumbers(){
+    public void someNumbers() {
         int[] input1 = new int[]{ 4, 25, 7, 9 };
         numFinder.find(input1);
         Assertions.assertEquals(4, numFinder.smallest);
@@ -22,7 +22,7 @@ public class BuggyNumFinderJUnitTest {
     }
 
     @Test
-    public void positiveMonotonicallyIncreasingSequence(){
+    public void positiveMonotonicallyIncreasingSequence() {
         int[] input1 = new int[]{ 10, 20, 30 };
         numFinder.find(input1);
         Assertions.assertEquals(10, numFinder.smallest);
@@ -30,7 +30,7 @@ public class BuggyNumFinderJUnitTest {
     }
 
     @Test
-    public void positiveMonotonicallyDecreasingSequence(){
+    public void positiveMonotonicallyDecreasingSequence() {
         int[] input1 = new int[]{ 30, 20, 10 };
         numFinder.find(input1);
         Assertions.assertEquals(4, numFinder.smallest);

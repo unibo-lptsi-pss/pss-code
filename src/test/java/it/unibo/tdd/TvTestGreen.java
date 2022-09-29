@@ -6,7 +6,7 @@ public class TvTestGreen {
     Tv tv;
 
     @BeforeEach
-    public void setUp(){ tv = new Tv(); }
+    public void setUp() { tv = new Tv(); }
 
     @Test
     public void testTurnOnWhenOff() {
