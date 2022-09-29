@@ -26,6 +26,7 @@ val junitPlatformVersion = "5.9.1"
 
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitPlatformVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitPlatformVersion") // needed for @ParameterizedTest
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitPlatformVersion")
 }
 

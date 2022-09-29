@@ -1,4 +1,4 @@
-package it;
+package it.unibo.test;
 
 import org.junit.jupiter.api.Test;
 
