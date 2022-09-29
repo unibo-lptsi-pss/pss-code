@@ -9,6 +9,7 @@ public class BuggyNumFinderJUnitTest {
 
     @BeforeEach 
     void setup(){
+        System.out.println("Setup");
         numFinder = new BuggyNumFinder();
     }
 

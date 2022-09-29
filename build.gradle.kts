@@ -34,4 +34,6 @@ tasks.test {
     testLogging {
 		events("passed", "skipped", "failed")
 	}
+    testLogging.showStandardStreams = true
 }
+// ./gradlew tests --rerun-tasks --tests SomeTestClass*
