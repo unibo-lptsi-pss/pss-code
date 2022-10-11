@@ -1,4 +1,5 @@
-package it.unibo.apice.oop.p06interfaces.domo;
+package it.unibo.interfaces.domo;
+
 public class Radio implements Device{
     
     /* Campi della classe */

@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p05encapsulation;
+package it.unibo.encapsulation;
 
 /**
  * Point3D is an example showcasing some functionality of OO in Java, focussing

@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p05encapsulation.immutable;
+package it.unibo.encapsulation.immutable;
 
 public class UseImmutablePoint3D {
 

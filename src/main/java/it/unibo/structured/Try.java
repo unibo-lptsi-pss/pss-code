@@ -1,5 +1,5 @@
 package it.unibo.structured;
-
+@SuppressWarnings("all")
 public class Try {
 	public static void main(String[] s) {
 		System.out.println(10 + 20); // 30

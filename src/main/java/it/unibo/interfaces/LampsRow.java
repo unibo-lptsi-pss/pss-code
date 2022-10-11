@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p06interfaces;
+package it.unibo.interfaces;
 
 public class LampsRow{
     

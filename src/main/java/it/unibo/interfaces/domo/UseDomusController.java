@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p06interfaces.domo;
+package it.unibo.interfaces.domo;
 
 public class UseDomusController{
     
@@ -19,5 +19,6 @@ public class UseDomusController{
     	
     	// Verifico l'accensione
     	final boolean b = dc.isCompletelySwitchedOn(); // true
+		System.out.println("Completely switched on: " + b);
     }
 }

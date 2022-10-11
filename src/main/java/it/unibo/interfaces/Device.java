@@ -1,3 +1,5 @@
+package it.unibo.interfaces;
+
 /* Interfaccia per dispositivi
    Definisce un contratto:
    - si può accendere
@@ -8,7 +10,7 @@
          public/private nei metodi!
 */
    
-public interface Device{ 	
+public interface Device {	
     void switchOn();       
     void switchOff();	   
     boolean isSwitchedOn();

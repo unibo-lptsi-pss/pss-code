@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p06interfaces.domo;
+package it.unibo.interfaces.domo;
 
 public class Prova {
 

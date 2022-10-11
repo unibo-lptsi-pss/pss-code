@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p05encapsulation;
+package it.unibo.encapsulation;
 
 public class Lamp {
 
