@@ -33,7 +33,7 @@ public class BuggyNumFinderJUnitTest {
     public void positiveMonotonicallyDecreasingSequence() {
         int[] input1 = new int[]{ 30, 20, 10 };
         numFinder.find(input1);
-        Assertions.assertEquals(4, numFinder.smallest);
-        Assertions.assertEquals(25, numFinder.largest);
+        Assertions.assertEquals(10, numFinder.smallest);
+        Assertions.assertEquals(30, numFinder.largest);
     }
 }

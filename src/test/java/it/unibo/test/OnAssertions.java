@@ -12,6 +12,7 @@ public class OnAssertions {
         assertNotSame("hello", new String("hello"));
 
         assertTrue(new int[] { 1, 2, 3 } != new int[] { 1, 2, 3 });
+        assertNotEquals(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 });
         assertArrayEquals(new int[] { 1, 2, 3 }, new int[] { 1, 2, 3 });
 
         Object o = null;
