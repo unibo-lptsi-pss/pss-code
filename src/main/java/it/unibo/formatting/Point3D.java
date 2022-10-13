@@ -27,8 +27,9 @@ public class Point3D {
 		this.z = z;
 	}
 
-	/* A simple function that extracts useful info from a point */
-
+	/* A simple function that 
+	 * extracts useful info from a point 
+	 */
 	double getSquareModule() {
 		return this.x * this.x + this.y * this.y + this.z * this.z;
 	}
