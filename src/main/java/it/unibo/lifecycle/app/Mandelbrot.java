@@ -6,11 +6,11 @@ public class Mandelbrot {
 	int width, height, x, y; // uno per linea di norma
 	double minx, maxx, miny, maxy, maxIter; // uno per linea di norma
 
-	Mandelbrot(int width, int height, double minx, double maxx,  double miny, double maxy, int maxIter) {
+	Mandelbrot(int width, int height, double minx, double maxx,  
+			double miny, double maxy, int maxIter) {
 		this.width = width;	this.height = height;
 		this.minx = minx;	this.maxx = maxx;
-		this.miny = miny;	this.maxy = maxy;
-		this.maxIter = maxIter;
+		this.miny = miny;	this.maxy = maxy; this.maxIter = maxIter;
 	}
 	void advancePosition(){
 		x = (x + 1) % width;
