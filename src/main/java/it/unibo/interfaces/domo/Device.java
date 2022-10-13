@@ -9,7 +9,6 @@ Nota: nessuna indicazione public/private nei metodi!
 */
 
 public interface Device {
-	
 	void switchOn(); 
 
 	void switchOff(); 

@@ -1,8 +1,9 @@
 package it.unibo.formatting;
 
 /**
- * Point3D is an example showcasing some OO functionality in Java, with a
- * focus on formatting. All properties have default (package) access.
+ * Point3D is an example showcasing some OO functionality 
+ * in Java, with a focus on formatting. 
+ * All properties have default (package) access.
  */
 
 public class Point3D {

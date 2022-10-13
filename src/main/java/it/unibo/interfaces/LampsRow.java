@@ -1,21 +1,24 @@
 package it.unibo.interfaces;
 
-public class LampsRow{
-    
+public class LampsRow {
+ 
     private final Lamp[] row; // Campo
     
-    public LampsRow(final int size){
+    public LampsRow(final int size) {
     	this.row = new Lamp[size]; // Tutti i valori a null
     }
-    public void installLamp(final int position, final Lamp lamp){
+
+    public void installLamp(final int position, final Lamp lamp) {
     	this.row[position] = lamp;
     }
-    public void removeLamp(final int position){
+
+    public void removeLamp(final int position) {
     	this.row[position] = null;
     }
-    public void switchAll(final boolean on){
-    	for (Lamp lamp: this.row){
-    	    if (lamp != null){ // Previene il NullPointException
+
+    public void switchAll(final boolean on) {
+    	for (Lamp lamp: this.row) {
+    	    if (lamp != null) { // Previene il NullPointException
     	    	if (on){
     	    	    lamp.switchOn();
     	    	} else {
@@ -24,10 +27,12 @@ public class LampsRow{
     	    }
     	}
     }
-    public Lamp getLamp(final int position){ // Selettore
+
+    public Lamp getLamp(final int position) { // Selettore
     	return this.row[position];
     }
-    public boolean isInstalled(final int position){ // Selettore
+
+    public boolean isInstalled(final int position) { // Selettore
     	return this.row[position] != null;
-   }
+    }
 }
