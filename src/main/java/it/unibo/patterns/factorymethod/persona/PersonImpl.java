@@ -1,4 +1,4 @@
-package it.unibo.patterns.factorymethod;
+package it.unibo.patterns.factorymethod.persona;
 
 public class PersonImpl implements Person {
 	
@@ -27,6 +27,4 @@ public class PersonImpl implements Person {
     public int getYearOfBirth() {
         return year;
     }
-
-    @Override
 }

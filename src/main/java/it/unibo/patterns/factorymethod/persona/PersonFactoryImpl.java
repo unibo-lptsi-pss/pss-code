@@ -1,4 +1,4 @@
-package it.unibo.patterns.factorymethod;
+package it.unibo.patterns.factorymethod.persona;
 
 public class PersonFactoryImpl implements PersonFactory {
     @Override
