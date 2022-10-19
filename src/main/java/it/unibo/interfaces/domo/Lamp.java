@@ -57,8 +57,4 @@ public class Lamp implements Device {
     public boolean isSwitchedOn(){
     	return this.switchedOn;
     }
-    
-    public String toString(){
-        return "I'm a Lamp..";
-    }
 } 
