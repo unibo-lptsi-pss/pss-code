@@ -3,7 +3,7 @@ package it.unibo.patterns.strategy;
 public class UsePersons {
     public static void sortPeople(Person[] ps, PersonCompareStrategy comparator) {
         boolean sorted = false;
-        while(!sorted){
+        while(!sorted){ // bubble sort
             sorted = true;
             for(int i = 0; i < ps.length-1; i++) {
                 if(comparator.compareTwoPeople(ps[i], ps[i+1]) > 0) {

@@ -1,12 +1,11 @@
 package it.unibo.patterns.strategy;
 
 public class Person {	
-	private String name;
-	private String surname;
-	private int year = 1900;
+	private final String name;
+	private final String surname;
+	private final int year;
 	
-    Person(String name, String surname, int year) {
-        super();
+    Person(final String name, final String surname, final int year) {
         this.name = name;
         this.surname = surname;
         this.year = year;
