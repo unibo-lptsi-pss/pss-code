@@ -1,6 +1,6 @@
-package it.unibo.interfaces.domo;
+package it.unibo.interfaces.multiple;
 
-public class Lamp implements Device {
+public class Lamp implements LuminousDevice {
     /* Costanti luminosita' */
     private final static double MIN_VAL = 0.0;
     private final static double MAX_VAL = 1.0;
@@ -59,6 +59,6 @@ public class Lamp implements Device {
     }
     
     public String toString(){
-        return "I'm a Lamp..";
+        return "Lamp[" + (isSwitchedOn() ? "on" : "off") + "; intensity=" + intensity + "]";
     }
 } 
