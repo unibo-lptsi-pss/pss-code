@@ -30,7 +30,7 @@ public class UsePersons {
         Person[] people = new Person[] { p1, p2, p3 };
         sortPeople(people, new PersonComparatorByAge());
         printPeople(people);
-        System.out.println("\n---\n");
+        System.out.println("\n");
         sortPeople(people, new PersonComparatorByFullName());
         printPeople(people);
     }
