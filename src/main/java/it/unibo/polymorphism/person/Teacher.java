@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p08polymorphism.person;
+package it.unibo.polymorphism.person;
 
 import java.util.Arrays;
 

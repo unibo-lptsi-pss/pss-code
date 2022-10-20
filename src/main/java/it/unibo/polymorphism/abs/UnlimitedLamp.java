@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p08polymorphism.abs;
+package it.unibo.polymorphism.abs;
 
 /* Non si esaurisce mai */
 public class UnlimitedLamp extends LimitedLamp {

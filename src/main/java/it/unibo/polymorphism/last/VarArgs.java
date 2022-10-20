@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p08polymorphism.last;
+package it.unibo.polymorphism.last;
 
 public class VarArgs {
 	// somma un numero variabile di Integer

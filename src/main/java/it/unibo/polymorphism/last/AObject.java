@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p08polymorphism.last;
+package it.unibo.polymorphism.last;
 
 import java.util.Arrays;
 

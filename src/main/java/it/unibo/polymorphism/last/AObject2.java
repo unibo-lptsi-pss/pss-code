@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p08polymorphism.last;
+package it.unibo.polymorphism.last;
 
 /* Everything is an Object, ma quale?? */
 public class AObject2 {

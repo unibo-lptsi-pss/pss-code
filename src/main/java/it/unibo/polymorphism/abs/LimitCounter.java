@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p08polymorphism.abs;
+package it.unibo.polymorphism.abs;
 
 /* Contatore con metodo isOver:
  - increment bloccato da isOver

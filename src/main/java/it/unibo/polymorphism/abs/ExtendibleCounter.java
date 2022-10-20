@@ -1,4 +1,4 @@
-package it.unibo.apice.oop.p08polymorphism.abs;
+package it.unibo.polymorphism.abs;
 
 /* Il nome ExtendibleCounter è di comodo, più propriamente
  andrebbe chiamata semplicemente Counter */
