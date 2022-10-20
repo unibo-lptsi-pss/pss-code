@@ -1,10 +1,7 @@
-package it.unibo.patterns.factorymethod.domo;
+package it.unibo.patterns.abstractfactory.domo;
 
 public class AdvancedLampFactory implements LampFactory {
-
-    @Override
     public Lamp createLamp() {
         return new AdvancedLampImpl();
     }
-
 }

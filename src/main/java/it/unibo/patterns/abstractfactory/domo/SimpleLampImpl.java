@@ -1,4 +1,4 @@
-package it.unibo.patterns.factorymethod.domo;
+package it.unibo.patterns.abstractfactory.domo;
 
 public class SimpleLampImpl implements Lamp {
    private boolean switchedOn;
@@ -22,4 +22,6 @@ public class SimpleLampImpl implements Lamp {
    public String toString() {
 	   return "LAMP[" + this.isSwitchedOn() + "]";
    }
+
+   public void ecoMode() { }
 }

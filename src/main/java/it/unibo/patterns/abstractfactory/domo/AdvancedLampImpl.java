@@ -1,4 +1,4 @@
-package it.unibo.patterns.factorymethod.domo;
+package it.unibo.patterns.abstractfactory.domo;
 
 public class AdvancedLampImpl implements AdvancedLamp {
    public final static int MIN_INTENSITY = 1;
@@ -9,7 +9,7 @@ public class AdvancedLampImpl implements AdvancedLamp {
 
    public AdvancedLampImpl() {
       this.switchedOn = false;
-      this.intensity = MIN_INTENSITY;
+      this.intensity = (MIN_INTENSITY + MAX_INTENSITY) / 2;
    }
 
    public void switchOn() {
@@ -37,6 +37,10 @@ public class AdvancedLampImpl implements AdvancedLamp {
       setIntensity(getIntensity() + 1);
    }
 
+   public void ecoMode() {
+      setIntensity(MIN_INTENSITY);
+   }
+
    public int getIntensity() {
       return this.intensity;
    }
@@ -44,5 +48,4 @@ public class AdvancedLampImpl implements AdvancedLamp {
    public String toString() {
 	   return "LAMP[" + this.isSwitchedOn() + "; intensity: " + this.getIntensity() + "]";
    }
-
 }

@@ -1,4 +1,4 @@
-package it.unibo.patterns.strategy;
+package it.unibo.patterns.strategy.person;
 
 public class UsePersons {
     public static void sortPeople(Person[] ps, PersonCompareStrategy comparator) {

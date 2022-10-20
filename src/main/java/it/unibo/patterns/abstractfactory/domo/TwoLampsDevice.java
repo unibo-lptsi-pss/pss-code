@@ -1,27 +1,14 @@
-package it.unibo.patterns.factorymethod.domo;
+package it.unibo.patterns.abstractfactory.domo;
 
 public class TwoLampsDevice {
+	private Lamp l1;
+	private Lamp l2;
 
-	/* Composizione immutabile di due Lamp! */
-	private final Lamp l1;
-	private final Lamp l2;
-
-	/* Composizione inizializzata al momento della costruzione */
 	public TwoLampsDevice(LampFactory f) {
 		this.l1 = f.createLamp();
 		this.l2 = f.createLamp();
 	}
 
-	/* Metodi getter */
-	public Lamp getFirst() {
-		return this.l1;
-	}
-
-	public Lamp getSecond() {
-		return this.l2;
-	}
-
-	/* Altri metodi */
 	public void switchOnBoth() {
 		this.l1.switchOn();
 		this.l2.switchOn();
@@ -33,8 +20,8 @@ public class TwoLampsDevice {
 	}
 
 	public void ecoMode() {
-		this.l1.switchOff();
-		this.l2.switchOn();
+		this.l1.ecoMode();
+		this.l2.ecoMode();
 	}
 
 	public String toString() {

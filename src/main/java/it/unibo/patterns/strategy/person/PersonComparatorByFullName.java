@@ -1,4 +1,4 @@
-package it.unibo.patterns.strategy;
+package it.unibo.patterns.strategy.person;
 
 public class PersonComparatorByFullName implements PersonCompareStrategy {
     public int compareTwoPeople(Person p1, Person p2) {

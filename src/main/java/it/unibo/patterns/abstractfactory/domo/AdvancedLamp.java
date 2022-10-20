@@ -1,4 +1,4 @@
-package it.unibo.patterns.factorymethod.domo;
+package it.unibo.patterns.abstractfactory.domo;
 
 public interface AdvancedLamp extends Lamp {	
     public void dim();

@@ -1,11 +1,11 @@
-package it.unibo.patterns.factorymethod.persona;
+package it.unibo.patterns.strategy.person;
 
-public class PersonImpl implements Person {
+public class Person {	
 	private final String name;
 	private final String surname;
 	private final int year;
 	
-    PersonImpl(final String name, final String surname, final int year) {
+    Person(final String name, final String surname, final int year) {
         this.name = name;
         this.surname = surname;
         this.year = year;
