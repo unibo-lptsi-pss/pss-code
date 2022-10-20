@@ -1,4 +1,4 @@
-package it.unibo.patterns.abstractfactory.domo;
+package it.unibo.patterns.factory.domo;
 
 public class AdvancedLampImpl implements AdvancedLamp {
    public final static int MIN_INTENSITY = 1;

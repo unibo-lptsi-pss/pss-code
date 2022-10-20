@@ -1,4 +1,4 @@
-package it.unibo.patterns.abstractfactory.domo;
+package it.unibo.patterns.factory.domo;
 
 public class UseTwoLampsDevice {
 	private static void testWith(LampFactory lf) {
@@ -13,5 +13,4 @@ public class UseTwoLampsDevice {
 		testWith(new SimpleLampFactory()); 
 		testWith(new AdvancedLampFactory());
 	}
-
 }

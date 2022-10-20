@@ -1,4 +1,4 @@
-package it.unibo.patterns.abstractfactory.domo;
+package it.unibo.patterns.factory.domo;
 
 public class SimpleLampImpl implements Lamp {
    private boolean switchedOn;

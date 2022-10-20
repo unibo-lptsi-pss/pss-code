@@ -1,12 +1,12 @@
-package it.unibo.patterns.abstractfactory.domo;
+package it.unibo.patterns.factory.domo;
 
-public class TwoLampsDevice {
+public class TwoLampsDeviceWithStaticFactory {
 	private Lamp l1;
 	private Lamp l2;
 
-	public TwoLampsDevice(LampFactory f) {
-		this.l1 = f.createLamp();
-		this.l2 = f.createLamp();
+	public TwoLampsDeviceWithStaticFactory() {
+		this.l1 = LampFactoryModule.createLamp(false);
+		this.l2 = LampFactoryModule.createLamp(true);
 	}
 
 	public void switchOnBoth() {
