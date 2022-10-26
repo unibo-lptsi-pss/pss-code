@@ -1,6 +1,7 @@
 package it.unibo.patterns.decorator.problem;
 
 public class GlutFree implements Pizza {
+    
     private final Pizza pizza;
     
     public GlutFree(Pizza pizza) {
@@ -17,4 +18,5 @@ public class GlutFree implements Pizza {
     public String getIngredients() {
         return "[GF] "+this.pizza.getIngredients();
     }
+    
 }

@@ -1,6 +1,7 @@
 package it.unibo.patterns.decorator;
 
 public class BasicIngredient extends IngredientDecorator {
+	
 	private final String name;
 	private final int cost;
 	
@@ -17,4 +18,5 @@ public class BasicIngredient extends IngredientDecorator {
 	public String getIngredients(){
 		return super.getIngredients() + ", " + this.name;
 	}
+	
 }
