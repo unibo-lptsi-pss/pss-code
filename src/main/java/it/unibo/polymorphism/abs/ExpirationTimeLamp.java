@@ -4,7 +4,6 @@ import java.util.Date;
 
 /* Si esaurisce dopo un certo tempo (reale) dopo la prima accensione */
 public class ExpirationTimeLamp extends LimitedLamp {
-
 	/* Tengo il momento dell'accensione e la durata */
 	private Date firstSwitchDate;
 	private long duration;

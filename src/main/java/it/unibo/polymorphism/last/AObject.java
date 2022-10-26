@@ -8,14 +8,13 @@ public class AObject {
 		final Object[] os = new Object[5];
 		os[0] = new Object();
 		os[1] = "stringa";
-		os[2] = new Integer(10);
+		os[2] = Integer.valueOf(10);
 		os[3] = new int[] { 10, 20, 30 };
 		os[4] = new java.util.Date();
 		printAll(os);
 		System.out.println(Arrays.toString(os));
 		System.out.println(Arrays.deepToString(os));
 	}
-
 	
 	public static void printAll(final Object[] array) {
 		for (final Object o : array) {
