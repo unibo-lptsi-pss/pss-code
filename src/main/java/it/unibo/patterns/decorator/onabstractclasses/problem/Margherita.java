@@ -1,7 +1,6 @@
 package it.unibo.patterns.decorator.problem;
 
 public class Margherita implements Pizza {
-
     @Override
     public int getCost() {
         return 650;
@@ -11,5 +10,4 @@ public class Margherita implements Pizza {
     public String getIngredients() {
         return "mozzarella, pomodoro";
     }
-
 }

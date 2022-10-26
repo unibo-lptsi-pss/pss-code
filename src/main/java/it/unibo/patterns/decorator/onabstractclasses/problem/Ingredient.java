@@ -1,7 +1,6 @@
 package it.unibo.patterns.decorator.problem;
 
 public abstract class Ingredient implements Pizza {
-    
     private final Pizza pizza;
     
     public Ingredient(Pizza pizza) {
@@ -22,5 +21,4 @@ public abstract class Ingredient implements Pizza {
     protected abstract int singleCost();
     
     protected abstract String name();
-
 }

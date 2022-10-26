@@ -1,7 +1,6 @@
 package it.unibo.patterns.decorator;
 
 public abstract class IngredientDecorator implements Pizza {
-	
 	protected final Pizza decorated;
 	
 	protected IngredientDecorator(Pizza decorated){
@@ -15,5 +14,4 @@ public abstract class IngredientDecorator implements Pizza {
 	public String getIngredients(){
 		return this.decorated.getIngredients();
 	}
-	
 }
