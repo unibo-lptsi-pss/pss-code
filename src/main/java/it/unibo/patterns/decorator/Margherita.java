@@ -10,6 +10,6 @@ public class Margherita implements Pizza {
 	}
 	
 	public String getIngredients(){
-		return "Pomodoro, Mozzarella";
+		return "Tomato, Mozzarella";
 	}
 }

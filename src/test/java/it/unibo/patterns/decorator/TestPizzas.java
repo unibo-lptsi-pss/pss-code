@@ -5,10 +5,10 @@ import org.junit.jupiter.api.*;
 
 import java.util.*;
 
-import it.unibo.patterns.decorator.Funghi;
+import it.unibo.patterns.decorator.Mushrooms;
 import it.unibo.patterns.decorator.GlutFree;
 import it.unibo.patterns.decorator.Margherita;
-import it.unibo.patterns.decorator.Salsiccia;
+import it.unibo.patterns.decorator.Sausage;
 
 /*
  * Considerare l'interfaccia Pizza e l'implementazione Margherita, con costo 6.50 Euro e ingredienti Mozzarella + Pomodoro.
@@ -30,10 +30,10 @@ public class TestPizzas {
 	
 	@Test
 	public void test(){
-		Pizza p1 = new Funghi(new Salsiccia(new Margherita()));
+		Pizza p1 = new Mushrooms(new Sausage(new Margherita()));
 		Pizza p2 = new Margherita();
-		Pizza p3 = new Salsiccia(new Salsiccia(new Margherita())); // Ingrediente usato due volte (ossia doppio)
-		Pizza p4 = new GlutFree(new Salsiccia(new Salsiccia(new Margherita())));
+		Pizza p3 = new Sausage(new Sausage(new Margherita())); // Ingrediente usato due volte (ossia doppio)
+		Pizza p4 = new GlutFree(new Sausage(new Sausage(new Margherita())));
 		// stampe di comodo
 		System.out.println(p1.getCost()+" "+p1.getIngredients());
 		System.out.println(p2.getCost()+" "+p2.getIngredients());
@@ -44,9 +44,9 @@ public class TestPizzas {
 		assertEquals(p2.getCost(),650);
 		assertEquals(p3.getCost(),950); // 6.50 + 1.50 + 1.50
 		assertEquals(p4.getCost(),1045);// (6.50 + 1.50 + 1.50) + 10%
-		assertEquals(p1.getIngredients(),"Pomodoro, Mozzarella, Salsiccia, Funghi");
-		assertEquals(p2.getIngredients(),"Pomodoro, Mozzarella");
-		assertEquals(p3.getIngredients(),"Pomodoro, Mozzarella, Salsiccia, Salsiccia");
-		assertEquals(p4.getIngredients(),"[GF] Pomodoro, Mozzarella, Salsiccia, Salsiccia");	
+		assertEquals(p1.getIngredients(),"Tomato, Mozzarella, Sausage, Mushrooms");
+		assertEquals(p2.getIngredients(),"Tomato, Mozzarella");
+		assertEquals(p3.getIngredients(),"Tomato, Mozzarella, Sausage, Sausage");
+		assertEquals(p4.getIngredients(),"[GF] Tomato, Mozzarella, Sausage, Sausage");	
 	}
 }
