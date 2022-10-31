@@ -9,6 +9,7 @@ class B extends A {
 		this.s = s;
 		System.out.println("B().. dopo " + this.s + " " + this.i);
 	}
+	
 	public static void main(String[] s) {
 		B b = new B("prova", 5); // Cosa succede?
 	}
