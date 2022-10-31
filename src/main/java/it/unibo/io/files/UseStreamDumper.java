@@ -1,4 +1,4 @@
-package it.unibo.io.p15io.files;
+package it.unibo.io.files;
 
 import java.io.*;
 import java.util.*;

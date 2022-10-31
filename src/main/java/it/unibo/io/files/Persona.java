@@ -1,4 +1,4 @@
-package it.unibo.io.p15io.files;
+package it.unibo.io.files;
 
 public class Persona implements java.io.Serializable {
 	private static final long serialVersionUID = 567742502623265945L;

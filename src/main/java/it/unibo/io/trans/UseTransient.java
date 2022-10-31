@@ -1,8 +1,8 @@
-package it.unibo.io.p15io.trans;
+package it.unibo.io.trans;
 
 import java.io.*;
 
-import it.unibo.io.p15io.files.UseFile;
+import it.unibo.io.files.UseFile;
 
 public class UseTransient {
 	public static void main(String[] args) throws Exception {

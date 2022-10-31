@@ -11,7 +11,7 @@ public class UseCollectors {
 		// un Set
 		System.out.println(li.stream().collect(toSet())); 
 		// un TreeSet
-		System.out.println(li.stream().collect(toCollection(TreeSet::new)));
+		// System.out.println(li.stream().collect(toCollection(TreeSet::new)));
 		System.out.println(li.stream().collect(minBy(Integer::compare)));
 		System.out.println(li.stream().collect(summingInt(Number::intValue)).toString());
 		System.out.println(li.stream().map(i->i.toString())

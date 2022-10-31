@@ -3,8 +3,6 @@ package it.unibo.io.files;
 import java.io.*;
 import java.util.*;
 
-import it.unibo.io.p15io.files.UseFile;
-
 public class ListOnFile {
 	public static void main(String[] args) throws IOException {
 		final List<Byte> list = new ArrayList<>(20); // Creo una lista random
