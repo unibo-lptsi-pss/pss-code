@@ -6,9 +6,8 @@ public abstract class LimitedLamp extends SimpleLamp {
 		super();
 	}
 
-	/* Questo metodo è finale: 
-	 * - regola la coerenza con okSwitch() e isOver() */
-	public final void switchOn() {
+	/* Questo metodo è finale: regola la coerenza con okSwitch() e isOver() */
+	public final void switchOn() { // TEMPLATE METHOD
 		if (!this.isSwitchedOn() && !this.isOver()) {
 			super.switchOn();
 			this.okSwitch();
@@ -22,7 +21,6 @@ public abstract class LimitedLamp extends SimpleLamp {
 	public abstract boolean isOver();
 
 	public String toString() {
-		return "Over: " + this.isOver() + 
-		       ", switchedOn: "	+ this.isSwitchedOn();
+		return "Over: " + this.isOver() + ", switchedOn: "	+ this.isSwitchedOn();
 	}
 }
