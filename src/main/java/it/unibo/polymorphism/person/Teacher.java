@@ -9,12 +9,12 @@ public class Teacher extends Person {
 	public Teacher(final String name, final int id, 
 			           final String[] courses) {
 		super(name, id);
-		this.courses = courses;
+		this.courses = Arrays.copyOf(courses, courses.length);
 	}
 
 	public String[] getCourses() {
 		// copia difensiva necessaria a preservare incapsulamento
-		return Arrays.copyOf(courses,courses.length);
+		return Arrays.copyOf(courses, courses.length);
 	}
 
 	public String toString() {
