@@ -1,22 +1,22 @@
 package it.unibo.collections.generic.list;
 
-public class Persona implements Comparable<Persona>{    
-    final private String nome;
-    final private int annoNascita;
-    final private boolean sposato;
-  
-    public Persona(String nome,int annoNascita,boolean sposato){
-    	this.nome = nome;		
-  		this.annoNascita = annoNascita;
-  		this.sposato = sposato;
-    }
-  
-    public String toString(){
-    	return this.nome + ":" + this.annoNascita + ":" + 
-    	       (this.sposato ? "spos" : "non-spos");
-    }
-  
-    @Override
+public class Persona implements Comparable<Persona> {
+	final private String nome;
+	final private int annoNascita;
+	final private boolean sposato;
+
+	public Persona(String nome, int annoNascita, boolean sposato) {
+		this.nome = nome;
+		this.annoNascita = annoNascita;
+		this.sposato = sposato;
+	}
+
+	public String toString() {
+		return this.nome + ":" + this.annoNascita + ":" +
+				(this.sposato ? "spos" : "non-spos");
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -47,9 +47,9 @@ public class Persona implements Comparable<Persona>{
 		return true;
 	}
 
-	public int compareTo(Persona p){
-    	return (this.annoNascita != p.annoNascita) 
-    		  ? this.annoNascita - p.annoNascita
-    		  : this.nome.compareTo(p.nome);
-    }
+	public int compareTo(Persona p) {
+		return (this.annoNascita != p.annoNascita)
+				? this.annoNascita - p.annoNascita
+				: this.nome.compareTo(p.nome);
+	}
 }
