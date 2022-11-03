@@ -1,7 +1,7 @@
 package it.unibo.generics.generics;
 
-public class UseVector{
-	public static void main(String[] s){
+public class UseVector {
+	public static void main(String[] s) {
     	// Il tipo di vs è Vector<String>
     	// Ma la sua classe è Vector<X>
     	final Vector<String> vs = new Vector<String>(); 
@@ -9,8 +9,8 @@ public class UseVector{
     	vs.addElement("di");		
     	vs.addElement("Vettore");
     	final String str = vs.getElementAt(0) + " " + 
-    		     vs.getElementAt(1) + " " +
-    		     vs.getElementAt(2); // Nota, nessun cast!
+    		vs.getElementAt(1) + " " +
+    		vs.getElementAt(2); // Nota, nessun cast!
     	System.out.println(str);
         
     	final Vector<Integer> vi=new Vector<Integer>(); 
@@ -23,4 +23,3 @@ public class UseVector{
     	System.out.println(i);
     }
 }
-

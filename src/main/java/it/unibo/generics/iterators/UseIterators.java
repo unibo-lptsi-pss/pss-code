@@ -1,10 +1,10 @@
 package it.unibo.generics.iterators;
 
-public class UseIterators{
-    public static void main(String[] s){
+public class UseIterators {
+    public static void main(String[] s) {
     	final List<String> list = new List<>("a", 
-    	    		    new List<>("b", 
-    	    		    new List<>("c",null)));
+			new List<>("b", 
+    	    new List<>("c",null)));
     	
     	final Vector<java.util.Date> vector=new Vector<>();
     	vector.addElement(new java.util.Date());
@@ -13,8 +13,7 @@ public class UseIterators{
         // creo 3 iteratori..
     	final Iterator<Integer> iterator = new IntRangeIterator(5,10);
     	final Iterator<String> iterator2 = new ListIterator<>(list);
-    	final Iterator<java.util.Date> iterator3 = 
-    			new VectorIterator<>(vector);
+    	final Iterator<java.util.Date> iterator3 = new VectorIterator<>(vector);
     	
     	// ne stampo il contenuto..
     	printAll(iterator);
