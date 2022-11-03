@@ -1,7 +1,7 @@
 package it.unibo.exceptions.classes;
 
 public class UseRange{
-    public static void main(String[] args){
+    public static void main(String[] args) {
     	// args tiene inizio e fine, passate da line di comando
     	final int a = Integer.parseInt(args[0]); // "5"
     	final int b = Integer.parseInt(args[1]); // "10"

@@ -1,10 +1,7 @@
 package it.unibo.exceptions.safedevices;
 
 /**
- * @author Mirko Viroli
- * 
  * The interface over the Model as of MVC
- *
  */
 public interface Model {
 	

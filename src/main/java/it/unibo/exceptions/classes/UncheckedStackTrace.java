@@ -1,15 +1,15 @@
 package it.unibo.exceptions.classes;
 
-public class UncheckedStackTrace{
-    public static void main(String[] args){
-    	final int[] a = new int[]{10,20,30};
-    	final int b = accessArray(a,1); // OK
-    	final int c = accessArray(a,3); // Eccezione
-    	final int d = accessArray(a,5); // Eccezione
+public class UncheckedStackTrace {
+    public static void main(String[] args) {
+        final int[] a = new int[]{10,20,30};
+        final int b = accessArray(a,1); // OK
+        final int c = accessArray(a,3); // Eccezione
+        final int d = accessArray(a,5); // Eccezione
     }
     
-    public static int accessArray(final int[] array, final int pos){
-    	return array[pos];
+    public static int accessArray(final int[] array, final int pos) {
+        return array[pos];
     }
 }
 

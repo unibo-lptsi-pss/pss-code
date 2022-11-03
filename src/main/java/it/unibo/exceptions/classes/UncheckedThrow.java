@@ -1,14 +1,14 @@
 package it.unibo.exceptions.classes;
 
-public class UncheckedThrow{
-    public static void main(String[] args){
-    	final int[] a = new int[]{10,20,30};
+public class UncheckedThrow {
+    public static void main(String[] args) {
+    	final int[] a = new int[]{ 10, 20, 30 };
     	final int b = accessArray(a,1); // OK
     	final int c = accessArray(a,3); // Eccezione
     }
     
-    public static int accessArray(final int[] array, final int pos){
-    	if (pos < 0 || pos >= array.length){
+    public static int accessArray(final int[] array, final int pos) {
+    	if (pos < 0 || pos >= array.length) {
     		final String msg = "Accesso fuori dai limiti, in posizione "+pos;
     		throw new java.lang.IllegalArgumentException(msg);
     	}
