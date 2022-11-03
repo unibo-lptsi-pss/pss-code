@@ -15,6 +15,6 @@ public class ListIterator<E> implements Iterator<E> {
     }
     
     public boolean hasNext() {
-    	return this.list != nul;
+    	return this.list != null;
     }
 }
