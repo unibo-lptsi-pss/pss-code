@@ -1,17 +1,18 @@
 package it.unibo.collections.generic.constrained;
 
 /* Non si esaurisce mai */
-public class UnlimitedLamp extends LimitedLamp{    
+public class UnlimitedLamp extends LimitedLamp {
     /* Nessuna informazione extra da tenere */
-    public UnlimitedLamp(){
-    	super();
+    public UnlimitedLamp() {
+        super();
     }
-    
+
     /* Allo switchOn.. non faccio nulla */
-    protected void okSwitch(){}
-    
-    /* Non è mai esaurita */
-    public boolean isOver(){
-    	return false;
+    protected void okSwitch() {
     }
-} 
+
+    /* Non è mai esaurita */
+    public boolean isOver() {
+        return false;
+    }
+}
