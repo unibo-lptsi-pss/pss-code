@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 plugins {
     java
     id("com.github.mrsarm.jshell.plugin") version("1.2.0") // ./gradlew --console plain jshell
@@ -33,7 +35,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
     testLogging {
-		events(TestLogEvent.values()) // events("passed", "skipped", "failed")
+		events(*(TestLogEvent.values())) // events("passed", "skipped", "failed")
 	}
     testLogging.showStandardStreams = true
 }
