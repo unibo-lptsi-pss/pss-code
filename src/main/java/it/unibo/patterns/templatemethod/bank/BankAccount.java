@@ -18,10 +18,16 @@ public abstract class BankAccount {
 	}
 
 	public static void main(String[] args){
-		final BankAccount b = new BankAccount(100){
-			public int operationFee(){ return 1; }
-		};
+		final BankAccount b = new BankAccountWithConstantFee(100);
 		b.withdraw(20);
 		System.out.println(b.getAmount()); // 79
 	}
+}
+
+class BankAccountWithConstantFee extends BankAccount {
+	public BankAccountWithConstantFee(int amount) {
+		super(amount);
+	}
+
+	public int operationFee(){ return 1; }	
 }
