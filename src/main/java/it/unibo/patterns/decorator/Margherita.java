@@ -5,11 +5,11 @@ package it.unibo.patterns.decorator;
  */
 
 public class Margherita implements Pizza {
-	public int getCost(){
+	public int getCost() {
 		return 650;
 	}
-	
-	public String getIngredients(){
+
+	public String getIngredients() {
 		return "Tomato, Mozzarella";
 	}
 }

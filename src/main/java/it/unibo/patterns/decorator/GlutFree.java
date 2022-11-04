@@ -1,17 +1,17 @@
 package it.unibo.patterns.decorator;
 
 public class GlutFree extends IngredientDecorator {
-	
-	public GlutFree(Pizza p){
+
+	public GlutFree(Pizza p) {
 		super(p);
 	}
-	
-	public int getCost(){
-		return (int)(super.getCost() * 1.1);
+
+	public int getCost() {
+		return (int) (super.getCost() * 1.1);
 	}
-	
-	public String getIngredients(){
-		return "[GF] "+super.getIngredients();
+
+	public String getIngredients() {
+		return "[GF] " + super.getIngredients();
 	}
-	
+
 }
