@@ -1,23 +1,23 @@
 package it.unibo.generics.iterators;
 
-public class Pair<X,Y> {
+public class Pair<X, Y> {
     private X first;
     private Y second;
-    
+
     public Pair(X first, Y second) {
-    	this.first = first;
-    	this.second = second;
+        this.first = first;
+        this.second = second;
     }
-    
+
     public X getFirst() {
-    	return this.first;
+        return this.first;
     }
-    
+
     public Y getSecond() {
-    	return this.second;
+        return this.second;
     }
-    
+
     public String toString() {
-    	return "<"+this.first+","+this.second+">";
+        return "<" + this.first + "," + this.second + ">";
     }
-} 
+}
