@@ -1,12 +1,12 @@
 package it.unibo.collections.collection;
 
-public class RangeIterator implements java.util.Iterator<Integer> {
+class RangeIterator implements java.util.Iterator<Integer> {
     private int current;
-    private int stop;
+    private final int stop;
 
-    public RangeIterator(int start, int stop) {
-        this.current = start;
-        this.stop = stop;
+    public RangeIterator(final Range range) {
+        this.current = range.start;
+        this.stop = range.stop;
     }
 
     public Integer next() {

@@ -4,9 +4,9 @@ class RangeIterator implements java.util.Iterator<Integer> {
     private int current;
     private final int stop;
 
-    public RangeIterator(final int start, final int stop) {
-        this.current = start;
-        this.stop = stop;
+    public RangeIterator(final Range range) {
+        this.current = range.start;
+        this.stop = range.stop;
     }
 
     public Integer next() {

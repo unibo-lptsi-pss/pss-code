@@ -22,6 +22,6 @@ public class RangeSet extends AbstractSet<Integer> {
 
 	public Iterator<Integer> iterator() {
 		// Il RangeIterator già visto...
-		return new RangeIterator(this.start, this.stop);
+		return new RangeIterator(new Range(this.start, this.stop));
 	}
 }

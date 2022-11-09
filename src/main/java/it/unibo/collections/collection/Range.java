@@ -1,4 +1,4 @@
-package it.unibo.collections.iterator;
+package it.unibo.collections.collection;
 
 public class Range implements Iterable<Integer> {
     public final int start;
