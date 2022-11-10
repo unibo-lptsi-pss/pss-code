@@ -13,7 +13,6 @@ public class Wildcard2 {
 		return out;
 	}
 
-	// Quale versione preferibile?
 	public static void main(String[] s) {
 		Vector<Double> vd = new Vector<>();
 		vd.addElement(1.5);
