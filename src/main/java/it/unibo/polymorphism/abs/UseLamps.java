@@ -24,7 +24,10 @@ public class UseLamps {
         lamp = new ExpirationTimeLamp(1000); // 1 sec
         lamp.switchOn();
         System.out.println("el| " + lamp);
-        Thread.sleep(10000); // attendo 1.1 secs
+        Thread.sleep(3000); // attendo 1.1 secs
         System.out.println("el| " + lamp); // dopo 1.1 secs si è esaurita
+        lamp.switchOff();
+        lamp.switchOn();
+        System.out.println("el| " + lamp);
     }
 }
