@@ -17,11 +17,16 @@ public class RangeSet extends AbstractSet<Integer> {
 	}
 
 	public int size() {
-		return (this.stop >= this.start) ? this.start - this.stop + 1 : 0;
+		return (this.stop >= this.start) ? this.stop - this.start + 1 : 0;
 	}
 
 	public Iterator<Integer> iterator() {
 		// Il RangeIterator già visto...
 		return new RangeIterator(new Range(this.start, this.stop));
+	}
+
+	/* We can override contains to avoid iteration, making it faster */
+	public boolean contains(Integer i) {
+		return i>=start && i<=stop;
 	}
 }
