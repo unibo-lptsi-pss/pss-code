@@ -6,7 +6,7 @@ public class UseArchive {
 		arc.add("Rossi", 1960, false);
 		arc.add("Bianchi", 1980, true);
 		arc.add("Verdi", 1972, true);
-		arc.add("Neri", 1968, false);
+		arc.add("Neri", 1968, true);
 		arc.remove("Neri", 1968);
 
 		System.out.println(arc.size()); // 3

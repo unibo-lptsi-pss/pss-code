@@ -28,7 +28,7 @@ public class Persona {
 		int result = 1;
 		result = prime * result + annoNascita;
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + (sposato ? 1231 : 1237);
+		// result = prime * result + (sposato ? 1231 : 1237);
 		return result;
 	}
 
@@ -53,9 +53,7 @@ public class Persona {
 		} else if (!nome.equals(other.nome)) {
 			return false;
 		}
-		if (sposato != other.sposato) {
-			return false;
-		}
+		/* if (sposato != other.sposato) { return false; } */
 		return true;
 	}
 
