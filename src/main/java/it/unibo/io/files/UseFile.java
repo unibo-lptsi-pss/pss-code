@@ -1,6 +1,9 @@
 package it.unibo.io.files;
 
 import java.io.File;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class UseFile {
 	public static final String SEP = File.separator;

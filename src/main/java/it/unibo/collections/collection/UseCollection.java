@@ -21,7 +21,7 @@ public class UseCollection {
         System.out.println(coll.contains(3)); // true
         System.out.println(Arrays.toString(coll.toArray()));
 
-        final var a = new Integer[2];
+        var a = new Integer[2];
         a = coll.toArray(a);
         System.out.println(Arrays.deepToString(a));
     }
