@@ -28,6 +28,6 @@ public class Range2 implements Iterable<Integer> {
 			return this.current <= Range2.this.stop;
 		}
 
-		public void remove() {}
+		public void remove() { }
 	}
 }
