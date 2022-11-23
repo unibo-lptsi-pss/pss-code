@@ -8,7 +8,7 @@ public class FileUtil {
 
     private static final String USER_HOME = System.getProperty("user.home");
 
-    public static List<File> findFilesInHomeDirectoryByExtension(final String extension) {
+    public static List<File> findFilesInHomeDirectoryByExtension(final String ext) {
         final var userHome = new File(USER_HOME);
         final var allFiles = userHome.listFiles();
         if (!userHome.isDirectory()) {
@@ -16,7 +16,7 @@ public class FileUtil {
         }
         final var result = new ArrayList<File>();
         for (final var file: allFiles) {
-            if (file.isFile() && file.getName().endsWith("." + extension)) {
+            if (file.isFile() && file.getName().endsWith("." + ext)) {
                 result.add(file);
             }
         }

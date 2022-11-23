@@ -17,7 +17,6 @@ public class UseByteArrayStream {
             System.out.println("End of stream");
         } finally { // assicura la chiusura anche con eccezioni
             in.close(); // problema: può tirare eccezione!
-            // Notare che il main può lanciare IOException, molto scomodo!
         }
     }
 }
