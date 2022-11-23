@@ -19,8 +19,8 @@ public class FilteringWithLambdas {
 		System.out.println(l3);
 
 		var l4 = new ArrayList<String>(list);
-		java.util.function.Predicate<String> p = s -> !s.matches("(foo)|(bar)");
-		l4.removeIf(p);
+		java.util.function.Predicate<String> p = s -> s.matches("(foo)|(bar)");
+		l4.removeIf(p.negate());
 		System.out.println(l4);
 	}
 }
