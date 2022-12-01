@@ -5,14 +5,14 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class UseCanvas{
-	
-	public static void main(String[] args){
+public class UseCanvas {
+
+	public static void main(String[] args) {
 		final DrawPanel pCenter = new DrawPanel();
 		pCenter.setBorder(new TitledBorder("Circles here.."));
 		// Intercetto i click del mouse!
 		// L'Adapter già implementa banalmente i metodi, quindi basta fare un override
-		pCenter.addMouseListener(new MouseAdapter(){
+		pCenter.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				pCenter.addPoint(e.getX(), e.getY());
 				pCenter.repaint();
@@ -21,17 +21,17 @@ public class UseCanvas{
 		// Intercetto il click sul pulsante
 		final JPanel pEast = new JPanel(new FlowLayout());
 		final JButton bt = new JButton("Draw");
-		bt.addActionListener(new ActionListener(){
+		bt.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				pCenter.addRandomPoint();
 				pCenter.repaint();
 			}
 		});
 		pEast.add(bt);
-		
-		final MyFrame frame = new MyFrame("Canvas Example",new BorderLayout());
-		frame.getMainPanel().add(pCenter,BorderLayout.CENTER);
-		frame.getMainPanel().add(pEast,BorderLayout.EAST);
+
+		final MyFrame frame = new MyFrame("Canvas Example", new BorderLayout());
+		frame.getMainPanel().add(pCenter, BorderLayout.CENTER);
+		frame.getMainPanel().add(pEast, BorderLayout.EAST);
 		frame.setResizable(false); // non estendibile!!
 		frame.setVisible(true);
 	}

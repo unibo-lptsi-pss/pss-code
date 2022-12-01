@@ -9,20 +9,20 @@ import javax.swing.*;
  * - Si aggiunge il JPanel
  * - Un metodo getMainPanel() ci dà il pannello
  */
-public class MyFrame extends JFrame{
-	
+public class MyFrame extends JFrame {
+
 	private final JPanel jp;
-	
-	public MyFrame(String title, LayoutManager lm){
-		super(title); 
+
+	public MyFrame(String title, LayoutManager lm) {
+		super(title);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(320,200);
+		this.setSize(320, 200);
 		// Il layout-manager può essere passato al costruttore di JPanel
 		this.jp = new JPanel(lm);
 		this.getContentPane().add(this.jp);
 	}
-	
-	public JPanel getMainPanel(){
+
+	public JPanel getMainPanel() {
 		return this.jp;
 	}
 

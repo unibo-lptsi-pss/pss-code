@@ -3,7 +3,7 @@ package it.unibo.guis.swing.mvc.model;
 import java.util.Random;
 
 public class DrawNumberImpl implements DrawNumber {
-	
+
 	private int choice;
 	private final int min;
 	private final int max;
@@ -20,22 +20,22 @@ public class DrawNumberImpl implements DrawNumber {
 
 	public void reset() {
 		this.remainingAttempts = this.attempts;
-		this.choice = this.min + random.nextInt(this.max-this.min+1);
+		this.choice = this.min + random.nextInt(this.max - this.min + 1);
 	}
 
 	public DrawResult attempt(int n) throws AttemptsLimitReachedException {
 		if (this.remainingAttempts == 0) {
 			throw new AttemptsLimitReachedException();
 		}
-		if (n < this.min || n > this.max){
+		if (n < this.min || n > this.max) {
 			throw new IllegalArgumentException();
 		}
-		if (n > this.choice){
+		if (n > this.choice) {
 			return DrawResult.YOURS_IS_HIGHER;
-		} 
-		if (n < this.choice){
+		}
+		if (n < this.choice) {
 			return DrawResult.YOURS_IS_LOWER;
-		} 
+		}
 		return DrawResult.YOU_WON;
 	}
 

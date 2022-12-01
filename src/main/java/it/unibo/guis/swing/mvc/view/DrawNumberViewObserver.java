@@ -1,7 +1,6 @@
 package it.unibo.guis.swing.mvc.view;
 
-public interface DrawNumberViewObserver {
-	
+public interface DrawNumberViewObserver {	
 	void newAttempt(int n);
 	
 	void resetGame();

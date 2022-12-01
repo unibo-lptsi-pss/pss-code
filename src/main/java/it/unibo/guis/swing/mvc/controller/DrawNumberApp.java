@@ -9,7 +9,7 @@ import it.unibo.guis.swing.mvc.view.DrawNumberViewImpl;
 import it.unibo.guis.swing.mvc.view.DrawNumberViewObserver;
 
 public class DrawNumberApp implements DrawNumberViewObserver {
-	
+
 	private static final int MIN = 0;
 	private static final int MAX = 100;
 	private static final int ATTEMPTS = 10;
@@ -17,7 +17,7 @@ public class DrawNumberApp implements DrawNumberViewObserver {
 	private final DrawNumberView view;
 
 	public DrawNumberApp() {
-		this.model = new DrawNumberImpl(MIN,MAX,ATTEMPTS); 
+		this.model = new DrawNumberImpl(MIN, MAX, ATTEMPTS);
 		this.view = new DrawNumberViewImpl();
 		this.view.setObserver(this);
 		this.view.start();
@@ -25,10 +25,10 @@ public class DrawNumberApp implements DrawNumberViewObserver {
 
 	public void newAttempt(int n) {
 		try {
-		    final DrawResult result = this.model.attempt(n);
+			final DrawResult result = this.model.attempt(n);
 			this.view.result(result);
-			if (result == DrawResult.YOU_WON){
-			    this.quit();
+			if (result == DrawResult.YOU_WON) {
+				this.quit();
 			}
 		} catch (IllegalArgumentException e) {
 			this.view.numberIncorrect();

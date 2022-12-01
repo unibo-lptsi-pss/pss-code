@@ -17,7 +17,7 @@ public class EventsFrame {
 		frame.getMainPanel().add(b1); // aggiungo i pulsanti
 		frame.getMainPanel().add(b2);
 		frame.getMainPanel().add(b3);
-		final ActionListener listener = new MyActionListener(); //listener unico
+		final ActionListener listener = new MyActionListener(); // listener unico
 		b1.addActionListener(listener);// registro il listener
 		b2.addActionListener(listener);// senza actionCommand!!
 		b3.addActionListener(listener);
@@ -26,21 +26,21 @@ public class EventsFrame {
 
 	private class MyActionListener implements ActionListener {
 
-		public void actionPerformed(ActionEvent e) { //switch su getSource
-			if (e.getSource()==EventsFrame.this.b1) {
+		public void actionPerformed(ActionEvent e) { // switch su getSource
+			if (e.getSource() == EventsFrame.this.b1) {
 				System.out.println("Hello!!");
-			} else if (e.getSource()==EventsFrame.this.b2) {
+			} else if (e.getSource() == EventsFrame.this.b2) {
 				System.out.println("Quitting..");
 				System.exit(0);
-			} else if (e.getSource()==EventsFrame.this.b3) {
+			} else if (e.getSource() == EventsFrame.this.b3) {
 				System.out.println("Going stuck..");
 				for (; true;) {
 				} // Nota l'effetto del loop sulla GUI
 			}
 		}
 	}
-	
-	public static void main(String[] args){
+
+	public static void main(String[] args) {
 		new EventsFrame();
 	}
 }

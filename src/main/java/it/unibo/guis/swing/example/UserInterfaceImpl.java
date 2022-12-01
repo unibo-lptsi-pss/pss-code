@@ -8,7 +8,7 @@ import it.unibo.guis.swing.MyFrame;
 public class UserInterfaceImpl implements UserInterface {
 
 	private final MyFrame frame;
-	
+
 	public UserInterfaceImpl() {
 		this.frame = new MyFrame("Flow and Border", new BorderLayout());
 		final JPanel pNorth = new JPanel(new FlowLayout());
@@ -18,12 +18,12 @@ public class UserInterfaceImpl implements UserInterface {
 		this.frame.getMainPanel().add(pNorth, BorderLayout.NORTH);
 		this.frame.getMainPanel().add(pSouth, BorderLayout.SOUTH);
 	}
-	
-	public void show(){
+
+	public void show() {
 		this.frame.setVisible(true);
 	}
 
 	public void setDimensions(int x, int y) {
-		this.frame.setSize(x,y);
+		this.frame.setSize(x, y);
 	}
 }
