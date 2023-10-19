@@ -58,7 +58,7 @@ public class Lamp {
    }
    
    public String toString() {
-	   return "Ac: " + this.isSwitchedOn() + " Int: " + this.getIntensity();
+	   return "Ac: " + this.isSwitchedOn() + ", Int: " + this.getIntensity();
    }
 
 }
