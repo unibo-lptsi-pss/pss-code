@@ -1,6 +1,6 @@
 package it.unibo.inheritance.example;
 
-public class UseEcoDomusController extends Object{
+public class UseEcoDomusController {
 	public static void main(String[] s) {
 		// Simulazione sessione di lavoro
 		final EcoDomusController controller;
