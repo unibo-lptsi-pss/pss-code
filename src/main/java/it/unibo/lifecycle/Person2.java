@@ -18,8 +18,8 @@ class Person2 { // dichiarazione classe
 	}
 	
 	Person2(String name) {
-		this(name, Person2.currentYear); // richiama costruttore a 2 arg..
+		this(name, Person2.CURRENT_YEAR); // richiama costruttore a 2 arg..
 	}
 
-	static int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+	static int CURRENT_YEAR = Calendar.getInstance().get(Calendar.YEAR);
 }
