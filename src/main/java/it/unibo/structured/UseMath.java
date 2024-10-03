@@ -7,7 +7,7 @@ public class UseMath { // E' una utility class
 	// lungo size, contenente numeri random 0<=x<=1
 	static double[] randomValues(int size){
 		double[] d = new double[size];
-		for (int i = 0; i<size; i++){
+		for (int i = 0; i < size; i++){
 			d[i] = Math.random();
 		}
 		return d;
@@ -19,7 +19,7 @@ public class UseMath { // E' una utility class
 		// Ricorda: toString è un metodo statico della classe Arrays
 		System.out.println(Arrays.toString(randomValues(10)));
 
-		for (double x = 0.0; x <= Math.PI*2; x = x + Math.PI/10){
+		for (double x = 0.0; x <= Math.PI * 2; x = x + Math.PI / 10){
 			System.out.println("x = " + x + "\t sin(x) = " + Math.sin(x));
 		}
 	}
