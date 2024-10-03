@@ -12,16 +12,16 @@ class Point3DBis { // dichiarazione classe
 		return this;
 	}
 
-	double getModuloQuadro() { 
+	double getModule() { 
 		return this.x * this.x + this.y * this.y + this.z * this.z;
 	}
 
-	static Point3DBis zero = new Point3DBis().build(0, 0, 0);
+	static Point3DBis ZERO = new Point3DBis().build(0, 0, 0);
 
 	static Point3DBis max(Point3DBis[] ps) { // metodo statico
-		Point3DBis max = zero; // ricerca max
+		Point3DBis max = ZERO; // ricerca max
 		for (Point3DBis elem : ps) {
-			if (elem.getModuloQuadro() > max.getModuloQuadro()) {
+			if (elem.getModule() > max.getModule()) {
 				max = elem;
 			}
 		}

@@ -13,7 +13,7 @@ class Point3D { // dichiarazione classe
 		return this;
 	}
 
-	double getModuloQuadro() { 
+	double getModule() { 
 		return this.x * this.x + this.y * this.y + this.z * this.z;
 	}
 }
