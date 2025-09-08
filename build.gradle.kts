@@ -39,4 +39,16 @@ tasks.test {
 	}
     testLogging.showStandardStreams = true
 }
+// For main preview
+tasks.withType<JavaCompile> {
+    options.compilerArgs.add("--enable-preview")
+}
+
+tasks.withType<Test> {
+    jvmArgs("--enable-preview")
+}
+
+tasks.withType<JavaExec> {
+    jvmArgs = listOf("--enable-preview")
+}
 // ./gradlew tests --rerun-tasks --tests SomeTestClass*
