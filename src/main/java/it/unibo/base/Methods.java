@@ -54,7 +54,7 @@ class MicrowaveOven {
         }
     }
 
-    void on() {
+    void start() {
         if (!on && time > 0 && power > 0) {
             on = true;
         } else {
@@ -84,7 +84,7 @@ void main() {
     System.out.println(oven.power);
     System.out.println(oven.time);
     System.out.println(oven.content.name);
-    oven.on();
+    oven.start();
     Food cookedPasta = oven.getContent();
     cookedPasta.consume();
     System.out.println("Pasta consumed? " + cookedPasta.eatean);
