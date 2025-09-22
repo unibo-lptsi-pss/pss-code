@@ -1,7 +1,7 @@
 package it.unibo.lifecycle.points;
 
 class UsePoint3D {
-    public static void main(String[] s) {
+    static void main(String[] s) {
         // creo e inizializzo vari punti
         Point3D p1 = new Point3D();
         p1.build(10, 20, 30);
