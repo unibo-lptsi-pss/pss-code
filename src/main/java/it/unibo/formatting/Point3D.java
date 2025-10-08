@@ -1,68 +1,68 @@
 package it.unibo.formatting;
 
 /**
- * Point3D is an example showcasing some OO functionality 
- * in Java, with a focus on formatting. 
+ * Point3D is an example showcasing some OO functionality
+ * in Java, with a focus on formatting.
  * All properties have default (package) access.
  */
-
 public class Point3D {
 
-	/*
-	 * A Point3D object is made of three doubles, 
-	 * and has some manipulation functions.
-	 */
+    /**
+     * A constant representing the origin (0,0,0).
+     */
+    public static final Point3D ZERO = new Point3D(0, 0, 0);
 
-	// A constant ZERO point
-	static final Point3D ZERO = new Point3D(0, 0, 0);
+    private double x;
+    private double y;
+    private double z;
 
-	double x; // x coordinate
-	double y; // y coordinate
-	double z; // z coordinate
+    /**
+     * Constructor for Point3D
+     */
+    public Point3D(final double x, final double y, final double z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
 
-	/* A standard constructor initializing fields */
-	Point3D(double x, double y, double z) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
-	}
+    /**
+     * Method to compute the square of the module of the point.
+     */
+    public double getSquareModule() {
+        return this.x * this.x + this.y * this.y + this.z * this.z;
+    }
 
-	/* A simple function that 
-	 * extracts useful info from a point 
-	 */
-	double getSquareModule() {
-		return this.x * this.x + this.y * this.y + this.z * this.z;
-	}
+    public double getX() {
+        return this.x;
+    }
 
-	/* The following three are called selector methods */
+    public double getY() {
+        return this.y;
+    }
 
-	double getX() {
-		return this.x;
-	}
+    public double getZ() {
+        return this.z;
+    }
 
-	double getY() {
-		return this.y;
-	}
+    /**
+     * Translate the point by the given amount.
+     */
+    public void translate(final double x, final double y, final double z) {
+        this.x += x;
+        this.y += y;
+        this.z += z;
+    }
 
-	double getZ() {
-		return this.z;
-	}
-
-	/* An example of a method changing the object state */
-	void translate(double x, double y, double z) {
-		this.x += x;
-		this.y += y;
-		this.z += z;
-	}
-
-	/* We also provide an example static method */
-	static Point3D max(Point3D[] ps) {
-		Point3D max = Point3D.ZERO; // Inizializing max
-		for (Point3D elem : ps) { // Iterating over all input points
-			if (elem.getSquareModule() > max.getSquareModule()) {
-				max = elem; // Update max if needed..
-			}
-		}
-		return max; // Return max
-	}
+    /**
+     * Finds the point with the maximum square module from an array of points.
+     */
+    public static Point3D max(final Point3D[] points) {
+        Point3D maximum = Point3D.ZERO;
+        for (Point3D point : points) {
+            if (point.getSquareModule() > maximum.getSquareModule()) {
+                maximum = point;
+            }
+        }
+        return maximum;
+    }
 }
