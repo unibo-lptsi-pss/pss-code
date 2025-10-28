@@ -11,18 +11,7 @@ public class UsePair2 {
 			v.getElementAt(1).getFirst(); // Nota, nessun cast!
 		System.out.println(str);
 		System.out.println(v);
-        
-        // Inferenza grazie agli argomenti e tipo variabile..
-    	final List<Pair<Integer,Integer>> l = 
-        	new List<>(new Pair<>(1,1), 
-        		new List<>(new Pair<>(2,2),
-        			new List<>(new Pair<>(3,3), null)));
-    	System.out.println(l);
-    	
-    	// Local variable type inference
-    	final var v2 = new Vector<Integer>();
-    	v2.addElement(1);		
-    	System.out.println(v2);
+    
     }
 }
 

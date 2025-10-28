@@ -14,15 +14,5 @@ public class UsePair {
 				v.getElementAt(1).getFirst(); // Nota, nessun cast!
 		System.out.println(str);
 		System.out.println(v);
-
-		final List<Pair<Integer, Integer>> l = 
-			new List<Pair<Integer, Integer>>(
-				new Pair<Integer, Integer>(1, 1),
-				new List<Pair<Integer, Integer>>(
-					new Pair<Integer, Integer>(2, 2),
-					new List<Pair<Integer, Integer>>(
-						new Pair<Integer, Integer>(3, 3),
-						null)));
-		System.out.println(l);
 	}
 }
