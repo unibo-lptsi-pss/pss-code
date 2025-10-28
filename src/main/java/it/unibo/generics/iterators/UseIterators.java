@@ -2,15 +2,11 @@ package it.unibo.generics.iterators;
 
 public class UseIterators {
 	public static void main(String[] s) {
-		final List<String> list = new List<>("a",
-			new List<>("b",
-				new List<>("c", null)));
-
 		final Vector<java.util.Date> vector = new Vector<>();
 		vector.addElement(new java.util.Date());
 		vector.addElement(new java.util.Date());
 
-		// creo 3 iteratori..
+		// creo 2 iteratori..
 		final Iterator<Integer> iterator1 = new IntRangeIterator(5, 10);
 		final Iterator<java.util.Date> iterator2 = new VectorIterator<>(vector);
 
