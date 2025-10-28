@@ -11,14 +11,12 @@ public class UseIterators {
 		vector.addElement(new java.util.Date());
 
 		// creo 3 iteratori..
-		final Iterator<Integer> iterator = new IntRangeIterator(5, 10);
-		final Iterator<String> iterator2 = new ListIterator<>(list);
-		final Iterator<java.util.Date> iterator3 = new VectorIterator<>(vector);
+		final Iterator<Integer> iterator1 = new IntRangeIterator(5, 10);
+		final Iterator<java.util.Date> iterator2 = new VectorIterator<>(vector);
 
 		// ne stampo il contenuto..
-		printAll(iterator);
+		printAll(iterator1);
 		printAll(iterator2);
-		printAll(iterator3);
 	}
 
 	static <X> void printAll(Iterator<X> iterator) {
