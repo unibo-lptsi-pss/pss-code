@@ -1,10 +1,10 @@
 package it.unibo.generics.iterators;
 
-public class List<X> {
-    private X head;
-    private List<X> tail;
+public class LList<X> {
+    private final X head;
+    private final LList<X> tail;
 
-    public List(X head, List<X> tail) {
+    public LList(X head, LList<X> tail) {
         this.head = head;
         this.tail = tail;
     }
@@ -13,7 +13,7 @@ public class List<X> {
         return this.head;
     }
 
-    public List<X> getTail() { // Coda della lista
+    public LList<X> getTail() { // Coda della lista
         return this.tail;
     }
 
@@ -22,7 +22,6 @@ public class List<X> {
     }
 
     public String toString() { // Rappr. a stringa
-        return "|" + this.head +
-                ((this.tail == null) ? "|" : this.tail.toString());
+        return "|" + this.head + (this.tail == null ? "|" : this.tail.toString());
     }
 }

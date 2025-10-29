@@ -1,8 +1,8 @@
 package it.unibo.generics.iterators;
 
 public class Pair<X, Y> {
-    private X first;
-    private Y second;
+    private final X first;
+    private final Y second;
 
     public Pair(X first, Y second) {
         this.first = first;
