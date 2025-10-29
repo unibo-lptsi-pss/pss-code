@@ -13,7 +13,7 @@ public class UseIterators {
         final Iterator<Calendar> iterator2 = new VectorIterator<>(vector);
         // ne stampo il contenuto
         printAll(iterator1);
-        printAll(iterator2);
+        printAll(iterator2); // Notare l'accesso uniforme! È uguale per Integer e Calendar
     }
 
     static <X> void printAll(Iterator<X> iterator) {
