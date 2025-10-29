@@ -42,12 +42,4 @@ public class Vector<X> {
         }
         return s;
     }
-
-    <E> Vector<Pair<X, E>> genVectorPair(final E e) {
-        Vector<Pair<X, E>> vp = new Vector<>(); /// Inferenza
-        for (int i = 0; i < this.size; i++) {
-            vp.addElement(new Pair<>(this.getElementAt(i), e));
-        }
-        return vp;
-    }
 }

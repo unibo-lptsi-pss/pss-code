@@ -18,6 +18,6 @@ public class Pair<X, Y> {
     }
 
     public String toString() {
-        return "<" + this.first + "," + this.second + ">";
+        return "<" + this.first + ", " + this.second + ">";
     }
 }
