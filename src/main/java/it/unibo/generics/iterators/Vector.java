@@ -11,7 +11,7 @@ public class Vector<X> {
         this.size = 0;
     }
 
-    public void addElement(X e) {
+    public void addElement(final X e) {
         if (this.size == elements.length) {
             this.expand(); // Se non c'è spazio
         }
@@ -19,7 +19,7 @@ public class Vector<X> {
         this.size++;
     }
 
-    public X getElementAt(int position) {
+    public X getElementAt(final int position) {
         return (X) this.elements[position];
     }
 
