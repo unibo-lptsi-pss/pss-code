@@ -4,7 +4,7 @@ import it.unibo.generics.generics.Vector;
 
 public class Wildcard2 {
     // Metodo che usa la wildcard
-    public static Vector<Integer> toIntVector(Vector<? extends Number> vec) {
+    public static Vector<Integer> toIntVector(final Vector<? extends Number> vec) {
         final Vector<Integer> out = new Vector<>();
         for(int i = 0; i < vec.getLength(); i++) {
             // Si noti accesso al metodo intValue() del contratto di Number
