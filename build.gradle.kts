@@ -24,12 +24,13 @@ application {
     mainClass.set(project.properties["mainClass"].toString())
 }
 
-val junitPlatformVersion = "5.9.1"
+val junitPlatformVersion = "6.0.1"
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitPlatformVersion")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitPlatformVersion") // needed for @ParameterizedTest
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitPlatformVersion")
+    testImplementation(platform("org.junit:junit-bom:$junitPlatformVersion"))
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.junit.jupiter:junit-jupiter-params") // needed for @ParameterizedTest
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
 tasks.test {

@@ -17,23 +17,23 @@ public class BuggyNumFinderJUnitTest {
     public void someNumbers() {
         int[] input1 = new int[]{ 4, 25, 7, 9 };
         numFinder.find(input1);
-        Assertions.assertEquals(4, numFinder.smallest);
-        Assertions.assertEquals(25, numFinder.largest);
+        Assertions.assertEquals(4, numFinder.getSmallest());
+        Assertions.assertEquals(25, numFinder.getLargest());
     }
 
     @Test
     public void positiveMonotonicallyIncreasingSequence() {
         int[] input1 = new int[]{ 10, 20, 30 };
         numFinder.find(input1);
-        Assertions.assertEquals(10, numFinder.smallest);
-        Assertions.assertEquals(30, numFinder.largest);
+        Assertions.assertEquals(10, numFinder.getSmallest());
+        Assertions.assertEquals(30, numFinder.getLargest());
     }
 
     @Test
     public void positiveMonotonicallyDecreasingSequence() {
         int[] input1 = new int[]{ 30, 20, 10 };
         numFinder.find(input1);
-        Assertions.assertEquals(10, numFinder.smallest);
-        Assertions.assertEquals(30, numFinder.largest);
+        Assertions.assertEquals(10, numFinder.getSmallest());
+        Assertions.assertEquals(30, numFinder.getLargest());
     }
 }

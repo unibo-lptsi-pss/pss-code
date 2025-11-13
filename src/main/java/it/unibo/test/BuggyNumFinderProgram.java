@@ -19,7 +19,7 @@ public class BuggyNumFinderProgram {
         // Esecuzione della funzionalità
         nf.find(array);
         // Stampa dei risultati
-        System.out.println("Smallest: " + nf.smallest);
-        System.out.println("Largest: " + nf.largest);
+        System.out.println("Smallest: " + nf.getSmallest());
+        System.out.println("Largest: " + nf.getLargest());
     }
 }
