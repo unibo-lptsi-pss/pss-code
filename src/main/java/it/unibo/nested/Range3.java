@@ -1,5 +1,7 @@
 package it.unibo.nested;
 
+import java.util.Iterator;
+
 public class Range3 implements Iterable<Integer> {
     private final int start;
     private final int stop;
@@ -10,23 +12,17 @@ public class Range3 implements Iterable<Integer> {
     }
 
     public java.util.Iterator<Integer> iterator() {
-        class Iterator implements java.util.Iterator<Integer> {
+        class RangeIterator implements Iterator<Integer> {
             private int current;
 
-            public Iterator() {
-                this.current = Range3.this.start;
-            }
+            public RangeIterator() { this.current = Range3.this.start; }
 
-            public Integer next() {
-                return this.current++;
-            }
+            public Integer next() { return this.current++; }
 
-            public boolean hasNext() {
-                return this.current <= Range3.this.stop;
-            }
+            public boolean hasNext() { return this.current <= Range3.this.stop; }
 
             public void remove() { }
         }
-        return new Iterator();
+        return new RangeIterator();
     }
 }
