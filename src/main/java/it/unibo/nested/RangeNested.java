@@ -2,12 +2,12 @@ package it.unibo.nested;
 
 import java.util.Iterator;
 
-public class Range implements Iterable<Integer> {
+public class RangeNested implements Iterable<Integer> {
 
     private final int start;
     private final int stop;
 
-    public Range(final int start, final int stop) {
+    public RangeNested(final int start, final int stop) {
         this.start = start;
         this.stop = stop;
     }

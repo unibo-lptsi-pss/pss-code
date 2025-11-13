@@ -1,28 +1,30 @@
 package it.unibo.nested;
 
-public class Range4 implements Iterable<Integer> {
+import java.util.Iterator;
+
+public class RangeAnonymous implements Iterable<Integer> {
     private final int start;
     private final int stop;
 
-    public Range4(final int start, final int stop) {
+    public RangeAnonymous(final int start, final int stop) {
         this.start = start;
         this.stop = stop;
     }
 
-    public java.util.Iterator<Integer> iterator() {
-        return new java.util.Iterator<Integer>() {
+    public Iterator<Integer> iterator() {
+        return new Iterator<>() {
             // Non ci può essere costruttore!
             private int current = start; // o anche Range4.this.start
 
             public Integer next() {
-                return this.current++;
+                return current++;
             }
 
             public boolean hasNext() {
-                return this.current <= stop; // o anche Range4.this.stop
+                return current <= stop; // o anche Range4.this.stop
             }
 
             public void remove() { }
-        }; // questo è il ; del return!!
+        }; // questo è il ; del return
     }
 }
