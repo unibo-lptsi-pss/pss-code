@@ -1,4 +1,4 @@
-package it.unibo.advancedmechanisms.nested;
+package it.unibo.nested;
 
 public class UseRange {
     public static void main(String[] s) {

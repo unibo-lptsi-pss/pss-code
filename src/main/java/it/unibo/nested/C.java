@@ -1,4 +1,4 @@
-package it.unibo.advancedmechanisms.nested;
+package it.unibo.nested;
 
 class C {
 	// Prima
@@ -9,7 +9,7 @@ class C {
 			}
 		};
 	}
-	
+
 	// Dopo
 	Object m2(final int x) {
 		class Anonymous extends Object{

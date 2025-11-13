@@ -1,4 +1,4 @@
-package it.unibo.advancedmechanisms.nested;
+package it.unibo.nested;
 
 public class Range4 implements Iterable<Integer> {
     private final int start;
