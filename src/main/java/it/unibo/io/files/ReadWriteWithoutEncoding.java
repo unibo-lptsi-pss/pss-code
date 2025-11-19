@@ -10,7 +10,7 @@ public class ReadWriteWithoutEncoding {
 
     private static final String FILE_NAME = "test-output.txt";
 
-    public static void main(String[] args) throws IOException {
+    static void main() throws IOException {
         try (final var out = new FileOutputStream(FILE_NAME)) {
             System.out.println("Writing...");
             for (int b = 0; b < 1000; b++) {

@@ -14,13 +14,15 @@ public class UseBufferedPrintStream {
 
     private static final File FILE = new File("test-output.txt");
 
-    public static void main(String[] args) throws IOException {
+    static void main() throws IOException {
         // string -> buffer ->  compress -> file
-        try (final PrintStream fileOut = new PrintStream(
-            new BufferedOutputStream(new FileOutputStream(FILE)), // better performance
-            false,
-            StandardCharsets.UTF_8 // Always specify how to translate text into bytes and viceversa
-        )) {
+        try (
+            final PrintStream fileOut = new PrintStream(
+                new BufferedOutputStream(new FileOutputStream(FILE)),
+                false,
+                StandardCharsets.UTF_8 // Always specify how to translate text into bytes and viceversa
+            )
+        ) {
             fileOut.println("Hey, this is my first printed line in a text file!");
             fileOut.println("Here is another text line");
         }
@@ -28,9 +30,8 @@ public class UseBufferedPrintStream {
         // To read, we must reverse the operations:
         // file -> decompress -> string (optionally, with a buffer)
         try (
-            final var inputReader = new BufferedReader(
-                new InputStreamReader(new FileInputStream(FILE), StandardCharsets.UTF_8)
-            )
+            final var inputReader =
+                new BufferedReader(new InputStreamReader(new FileInputStream(FILE), StandardCharsets.UTF_8))
         ) {
             for (String line = inputReader.readLine(); line != null; line = inputReader.readLine()) {
                 System.out.println("Read line: " + line);
