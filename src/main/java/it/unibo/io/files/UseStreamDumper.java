@@ -19,14 +19,14 @@ public class UseStreamDumper {
         }
         final var file = txtFiles.getFirst();
         try(
-            final InputStream input = new ByteArrayInputStream(bytes);
-            final InputStream input2 = new FileInputStream(file);
+            final InputStream memoryInput = new ByteArrayInputStream(bytes);
+            final InputStream fileInput = new FileInputStream(file)
         ) {
             System.out.println(txtFiles.get(0).getAbsolutePath());
             System.out.println("First stream (from memory):");
-            StreamDumper.dump(input);
+            StreamDumper.dump(memoryInput);
             System.out.println("\nSecond stream (from file " + file.getPath() + ":");
-            StreamDumper.dump(input2);
+            StreamDumper.dump(fileInput);
             System.out.println();
         }
     }
