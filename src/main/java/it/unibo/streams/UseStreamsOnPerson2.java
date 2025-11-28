@@ -13,12 +13,11 @@ public class UseStreamsOnPerson2 {
 		list.add(new Person("Marco",null,4000,"Contractor"));
 		
 		// Jobs of people from Cesena
-		final String res = 
-				list.stream()
-				    .filter(p->p.getCity().filter(x->x.equals("Cesena")).isPresent())
-					.flatMap(p->p.getJobs().stream())
-					.distinct()
-					.collect(Collectors.joining("|", "[[", "]]"));
+		final String res = list.stream()
+            .filter(p -> p.getCity().equals("Cesena"))
+            .flatMap(p->p.getJobs().stream())
+            .distinct()
+            .collect(Collectors.joining("|", "[[", "]]"));
 		System.out.println(res);
 		
 		// Average income of professors
