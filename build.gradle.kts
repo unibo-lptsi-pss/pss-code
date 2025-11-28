@@ -6,6 +6,12 @@ plugins {
     application // -PmainClass=it.unibo.lifecycle.MandelbrotApp run
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(25))
+    }
+}
+
 sourceSets {
     main {
         java {
