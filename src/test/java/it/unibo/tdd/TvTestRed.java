@@ -8,6 +8,7 @@ public class TvTestRed {
     @BeforeEach
     public void setUp() { tv = new TvRed(); }
 
+    @Disabled // Remove to observe failure
     @Test
     public void testTurnOnFromOff() {
         Assumptions.assumeTrue(!tv.isOn()); // assunzione: il test ha senso solo se tv è spento
