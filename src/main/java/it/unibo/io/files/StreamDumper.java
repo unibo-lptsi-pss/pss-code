@@ -3,7 +3,7 @@ package it.unibo.io.files;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class StreamDumper {
+public final class StreamDumper {
     // rendo inaccessibile il costruttore
     private StreamDumper() {}
 
