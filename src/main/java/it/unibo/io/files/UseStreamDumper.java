@@ -17,7 +17,7 @@ public class UseStreamDumper {
         if (txtFiles.isEmpty()) {
             throw new IllegalStateException("No txt files on the user home directory!");
         }
-        final var file = txtFiles.get(0);
+        final var file = txtFiles.getFirst();
         try(
             final InputStream input = new ByteArrayInputStream(bytes);
             final InputStream input2 = new FileInputStream(file);
