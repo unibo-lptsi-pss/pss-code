@@ -36,6 +36,7 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:$junitPlatformVersion"))
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testImplementation("org.junit.jupiter:junit-jupiter-params") // needed for @ParameterizedTest
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
