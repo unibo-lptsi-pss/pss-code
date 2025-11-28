@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class UseByteArrayStream {
-    public static void main(String[] args) throws IOException {
+    static void main() throws IOException {
         final byte[] b = new byte[] { 10, 20, -1, 40, -58 };
         final InputStream in = new ByteArrayInputStream(b);
         try {
