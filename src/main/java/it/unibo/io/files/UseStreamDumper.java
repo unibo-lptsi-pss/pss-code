@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.Objects;
 
 public class UseStreamDumper {
-    public static void main(String[] args) throws IOException {
+    static void main() throws IOException {
         final byte[] bytes = new byte[]{ 10, 20, 30 };
         // Cerco un file txt nella home folder dell'utente
         final var txtFiles = FileUtil.findFilesInHomeDirectoryByExtension("txt");
