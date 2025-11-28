@@ -6,10 +6,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class UseFile {
-	public static final String SEP = File.separator;
-	// public static final String FILE_NAME = "/home/mirko/aula/15/Prova.bin"; // non portabile!!
 	public static final String FILE_NAME =
-		System.getProperty("user.home") + SEP + "aula" + SEP + "15" + SEP + "Prova.bin";
+		System.getProperty("user.home") + File.separator + "deleteme-pss-folder" + File.separator + "myfile.txt";
 
 	private static Iterable<Method> accessors(Class<?> c) throws Exception {
 		final Collection<Method> list = new ArrayList<>();
