@@ -10,10 +10,10 @@ public class FileUtil {
 
     public static List<File> findFilesInHomeDirectoryByExtension(final String ext) {
         final var userHome = new File(USER_HOME);
-        final var allFiles = userHome.listFiles();
         if (!userHome.isDirectory()) {
             throw new IllegalStateException("The user home is not a directory!");
         }
+        final var allFiles = userHome.listFiles();
         final var result = new ArrayList<File>();
         for (final var file: allFiles) {
             if (file.isFile() && file.getName().endsWith("." + ext)) {
