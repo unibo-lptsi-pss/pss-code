@@ -1,13 +1,9 @@
 package it.unibo.io.files;
 
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Objects;
 
 public class UseStreamDumper {
     static void main() throws IOException {
