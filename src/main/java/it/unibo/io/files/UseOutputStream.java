@@ -6,10 +6,8 @@ import java.io.OutputStream;
 import java.util.Random;
 
 public class UseOutputStream {
-    public static void main(final String[] args) throws IOException {
-        try (
-            final OutputStream output = new FileOutputStream(UseFile.FILE_NAME);
-        ) {
+    static void main() throws IOException {
+        try (final OutputStream output = new FileOutputStream(UseFile.FILE_NAME)) {
             // Aggiungo byte random
             final Random r = new Random();
             for (int i = 0; i < 100; i++) {
