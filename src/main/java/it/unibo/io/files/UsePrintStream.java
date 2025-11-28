@@ -17,12 +17,14 @@ public class UsePrintStream {
         }
     }
 
-    public static void main(String[] args) throws IOException {
-        try (final PrintStream fileOut = new PrintStream(
-            new FileOutputStream(FILE),
-            false,
-            StandardCharsets.UTF_8 // Always specify how to translate text into bytes and viceversa
-        )) {
+    static void main() throws IOException {
+        try (
+            final PrintStream fileOut = new PrintStream(
+                new FileOutputStream(FILE),
+                false,
+                StandardCharsets.UTF_8 // Always specify how to translate text into bytes and viceversa
+            )
+        ) {
             fileOut.println("Hey, this is my first printed line in a text file!");
             fileOut.println("Here is another text line");
             System.out.println("Writing completed!");
