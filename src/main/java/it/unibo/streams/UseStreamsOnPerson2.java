@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.*;
 
 public class UseStreamsOnPerson2 {
-	public static void main(String[] args) {
+	static void main() {
 		final List<Person> list = new ArrayList<>();
 		list.add(new Person("Mario","Cesena",20000,"Teacher"));
 		list.add(new Person("Rino","Forlì",50000,"Professor"));
