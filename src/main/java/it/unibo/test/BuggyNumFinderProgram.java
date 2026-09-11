@@ -1,6 +1,7 @@
 package it.unibo.test;
 
 import java.util.Scanner;
+import java.io.IO;
 
 public class BuggyNumFinderProgram {
     public static void main(String[] args){
@@ -19,7 +20,7 @@ public class BuggyNumFinderProgram {
         // Esecuzione della funzionalità
         nf.find(array);
         // Stampa dei risultati
-        System.out.println("Smallest: " + nf.getSmallest());
-        System.out.println("Largest: " + nf.getLargest());
+        IO.println("Smallest: " + nf.getSmallest());
+        IO.println("Largest: " + nf.getLargest());
     }
 }

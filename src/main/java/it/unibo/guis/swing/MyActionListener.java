@@ -1,6 +1,7 @@
 package it.unibo.guis.swing;
 
 import java.awt.event.*;
+import java.io.IO;
 
 // Nota: si potrebbero usare delle inner class
 // Nota: ActionCommand "abusa" delle stringhe..
@@ -8,12 +9,12 @@ public class MyActionListener implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand().equals("hello")) {
-			System.out.println("Hello!!");
+			IO.println("Hello!!");
 		} else if (e.getActionCommand().equals("quit")) {
-			System.out.println("Quitting..");
+			IO.println("Quitting..");
 			System.exit(0);
 		} else if (e.getActionCommand().equals("loop")) {
-			System.out.println("Going stuck..");
+			IO.println("Going stuck..");
 			for (; true;) {
 			} // Nota l'effetto del loop sulla GUI
 		}

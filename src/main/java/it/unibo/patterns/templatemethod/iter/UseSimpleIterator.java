@@ -1,4 +1,5 @@
 package it.unibo.patterns.templatemethod.iter;
+import java.io.IO;
 
 public class UseSimpleIterator {
 	
@@ -7,8 +8,8 @@ public class UseSimpleIterator {
 		final SimpleIterator<Integer> si = 
 				() -> {c.inc(); return c.getValue();};
 		
-		System.out.println(si.getNext());
-		System.out.println(si.getListOfNext(20));
+		IO.println(si.getNext());
+		IO.println(si.getListOfNext(20));
 	}
 
 }

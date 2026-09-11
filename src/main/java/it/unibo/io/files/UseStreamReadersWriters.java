@@ -1,6 +1,7 @@
 package it.unibo.io.files;
 
 import java.io.*;
+import java.io.IO;
 
 // Soluzione con specifica della codifica dei caratteri
 public class UseStreamReadersWriters {
@@ -17,9 +18,9 @@ public class UseStreamReadersWriters {
 		try(final BufferedReader r = new BufferedReader(
 				new InputStreamReader(
 					new FileInputStream(UseReadersWriters.FILE_NAME),"UTF-16"))){
-			System.out.println(r.readLine());
-			System.out.println(r.readLine());
-			System.out.println(r.readLine()); // null
+			IO.println(r.readLine());
+			IO.println(r.readLine());
+			IO.println(r.readLine()); // null
 		}	
 	}
 }

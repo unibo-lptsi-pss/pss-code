@@ -1,6 +1,7 @@
 package it.unibo.io.files;
 
 import java.io.*;
+import java.io.IO;
 
 public class UseDataStream {
 	public static void main(String[] args) throws IOException {
@@ -17,10 +18,10 @@ public class UseDataStream {
 			final InputStream file2 = new FileInputStream(UseFile.FILE_NAME);
 			final DataInputStream dstream2 = new DataInputStream(file2);
 		){
-			System.out.println(dstream2.readBoolean()); // Do not change order
-			System.out.println(dstream2.readInt());
-			System.out.println(dstream2.readUTF());
-			System.out.println(dstream2.readDouble());
+			IO.println(dstream2.readBoolean()); // Do not change order
+			IO.println(dstream2.readInt());
+			IO.println(dstream2.readUTF());
+			IO.println(dstream2.readDouble());
 		}
 	}
 }

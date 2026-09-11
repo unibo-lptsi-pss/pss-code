@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.io.IO;
 
 public class UsePrintStream {
 
@@ -13,7 +14,7 @@ public class UsePrintStream {
 
     private static void dumpFile() throws IOException {
         for (final String line: Files.readAllLines(FILE.toPath(), StandardCharsets.UTF_8)) {
-            System.out.println(line);
+            IO.println(line);
         }
     }
 
@@ -27,7 +28,7 @@ public class UsePrintStream {
         ) {
             fileOut.println("Hey, this is my first printed line in a text file!");
             fileOut.println("Here is another text line");
-            System.out.println("Writing completed!");
+            IO.println("Writing completed!");
             dumpFile();
         }
     }

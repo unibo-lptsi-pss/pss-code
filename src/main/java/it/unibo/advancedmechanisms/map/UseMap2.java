@@ -2,6 +2,7 @@ package it.unibo.advancedmechanisms.map;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.io.IO;
 
 public class UseMap2 {
     static void main() {
@@ -11,12 +12,12 @@ public class UseMap2 {
         map.put(345122, "Rossi");
         map.put(243001, "Verdi");
         for (final Map.Entry<Integer, String> entry : map.entrySet()) {
-            System.out.println(entry.getClass());
-            System.out.println(entry.getKey());
-            System.out.println(entry.getValue());
+            IO.println(entry.getClass());
+            IO.println(entry.getKey());
+            IO.println(entry.getValue());
             entry.setValue(entry.getValue() + " modificata!");
         }
-        System.out.println(map);
+        IO.println(map);
         // {345211=Bianchi modificata!, 345122=Rossi modificata!, 243001=Verdi modificata!}
     }
 }

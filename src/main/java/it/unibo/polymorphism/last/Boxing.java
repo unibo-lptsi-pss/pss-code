@@ -1,4 +1,5 @@
 package it.unibo.polymorphism.last;
+import java.io.IO;
 
 /* Showcase dell'autoboxing */
 public class Boxing {
@@ -13,6 +14,6 @@ public class Boxing {
 		final int i = is[0] + is[1] + is[2] + is[3];
 		// equivale a: is[0].intValue()+ is[1].intValue()+..
 		// non funzionerebbe se 'is' avesse tipo Object[]..
-		System.out.println("Somma: " + i); // 100
+		IO.println("Somma: " + i); // 100
 	}
 }

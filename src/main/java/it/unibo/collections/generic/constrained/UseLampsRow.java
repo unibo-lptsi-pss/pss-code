@@ -1,4 +1,5 @@
 package it.unibo.collections.generic.constrained;
+import java.io.IO;
 
 public class UseLampsRow {
 
@@ -11,7 +12,7 @@ public class UseLampsRow {
 		lr.getLamp(0).switchOn();
 		lr.switchOffAll();
 
-		System.out.println(lr.getLamp(0).isOver());
-		System.out.println(lr);
+		IO.println(lr.getLamp(0).isOver());
+		IO.println(lr);
 	}
 }

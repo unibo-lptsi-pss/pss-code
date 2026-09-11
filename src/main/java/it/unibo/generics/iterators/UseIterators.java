@@ -2,6 +2,7 @@ package it.unibo.generics.iterators;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.io.IO;
 
 public class UseIterators {
     public static void main(String[] s) {
@@ -18,7 +19,7 @@ public class UseIterators {
 
     static <X> void printAll(Iterator<X> iterator) {
         while (iterator.hasNext()) {
-            System.out.println("Elemento : " + iterator.next());
+            IO.println("Elemento : " + iterator.next());
         }
     }
 }

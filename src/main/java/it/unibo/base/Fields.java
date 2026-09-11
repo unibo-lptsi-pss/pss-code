@@ -21,9 +21,9 @@ void main() {
     oven.content.name = "Pasta al sugo"; // Posso accedere ai campi di content!
     oven.on = true;
     oven.content.eatean = true;
-    System.out.println(oven.model); // stampa "HotPoint Ariston"
-    System.out.println(oven.content.name); // stampa "Pasta al sugo"
-    System.out.println(oven.power); // stampa 800
-    System.out.println(oven.time); // stampa 60
-    System.out.println(oven.on); // stampa true
+    IO.println(oven.model); // stampa "HotPoint Ariston"
+    IO.println(oven.content.name); // stampa "Pasta al sugo"
+    IO.println(oven.power); // stampa 800
+    IO.println(oven.time); // stampa 60
+    IO.println(oven.on); // stampa true
 }

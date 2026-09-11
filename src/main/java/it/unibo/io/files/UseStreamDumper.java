@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.IO;
 
 public class UseStreamDumper {
     static void main() throws IOException {
@@ -18,12 +19,12 @@ public class UseStreamDumper {
             final InputStream memoryInput = new ByteArrayInputStream(bytes);
             final InputStream fileInput = new FileInputStream(file)
         ) {
-            System.out.println(txtFiles.get(0).getAbsolutePath());
-            System.out.println("First stream (from memory):");
+            IO.println(txtFiles.get(0).getAbsolutePath());
+            IO.println("First stream (from memory):");
             StreamDumper.dump(memoryInput);
-            System.out.println("\nSecond stream (from file " + file.getPath() + ":");
+            IO.println("\nSecond stream (from file " + file.getPath() + ":");
             StreamDumper.dump(fileInput);
-            System.out.println();
+            IO.println();
         }
     }
 }

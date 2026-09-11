@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
+import java.io.IO;
 
 public class UseBufferedPrintStream {
 
@@ -26,7 +27,7 @@ public class UseBufferedPrintStream {
             fileOut.println("Hey, this is my first printed line in a text file!");
             fileOut.println("Here is another text line");
         }
-        System.out.println("Writing completed!");
+        IO.println("Writing completed!");
         // To read, we must reverse the operations:
         // file -> decompress -> string (optionally, with a buffer)
         try (
@@ -34,7 +35,7 @@ public class UseBufferedPrintStream {
                 new BufferedReader(new InputStreamReader(new FileInputStream(FILE), StandardCharsets.UTF_8))
         ) {
             for (String line = inputReader.readLine(); line != null; line = inputReader.readLine()) {
-                System.out.println("Read line: " + line);
+                IO.println("Read line: " + line);
             }
         }
     }

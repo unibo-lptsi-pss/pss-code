@@ -1,6 +1,7 @@
 package it.unibo.lambdas.first;
 
 import java.awt.FlowLayout;
+import java.io.IO;
 
 import javax.swing.*;
 
@@ -8,12 +9,12 @@ public class UseButtonEventsWithLambda {
 	public static void main(String[] args) {
 		final JButton b1 = new JButton("Say Hello");
 		// lambda con single-expression body
-		b1.addActionListener( e -> System.out.println("Hello!!"+e));
+		b1.addActionListener( e -> IO.println("Hello!!"+e));
 		
 		final JButton b2 = new JButton("Quit");
 		// lambda con body
 		b2.addActionListener( e -> { 
-			System.out.println("Quitting.."+e);
+			IO.println("Quitting.."+e);
 			System.exit(0);
 		});
 		

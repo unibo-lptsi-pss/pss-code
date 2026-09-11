@@ -1,11 +1,12 @@
 package it.unibo.inheritance.analysis;
+import java.io.IO;
 
 class C {
 	protected int i;
 
 	void m() {
-		System.out.println("C.m.. prima " + i);
+		IO.println("C.m.. prima " + i);
 		this.i++;
-		System.out.println("C.m.. dopo " + i);
+		IO.println("C.m.. dopo " + i);
 	}
 }

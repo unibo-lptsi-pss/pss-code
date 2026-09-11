@@ -1,6 +1,7 @@
 package it.unibo.lambdas.first;
 
 import java.util.*;
+import java.io.IO;
 
 public class AllLambdas {
 	private static int mycompare(final String a, final String b) { 
@@ -13,20 +14,20 @@ public class AllLambdas {
 		Collections.sort(list, (String a, String b) -> {
 			return a.length() - b.length();
 		});
-		System.out.println(list); // [a, c, bb, ddd]
+		IO.println(list); // [a, c, bb, ddd]
 
 		Collections.sort(list, (a, b) -> {
 			return a.length() - b.length();
 		});
-		System.out.println(list); // [a, c, bb, ddd]
+		IO.println(list); // [a, c, bb, ddd]
 
 		Collections.sort(list, (String a, String b) -> a.length() - b.length());
-		System.out.println(list); // [a, c, bb, ddd]
+		IO.println(list); // [a, c, bb, ddd]
 
 		Collections.sort(list, (a, b) -> a.length() - b.length());
-		System.out.println(list); // [a, c, bb, ddd]
+		IO.println(list); // [a, c, bb, ddd]
 
 		Collections.sort(list, (a, b) -> mycompare(a, b));
-		System.out.println(list); // [a, c, bb, ddd]
+		IO.println(list); // [a, c, bb, ddd]
 	}
 }

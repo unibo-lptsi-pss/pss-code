@@ -1,4 +1,5 @@
 package it.unibo.lifecycle;
+import java.io.IO;
 
 public class GC {
 	private static long size = 1000;
@@ -13,7 +14,7 @@ public class GC {
 			// Stampo solo ogni tanto
 			if (l % size == 0) {
 				System.out.print("Objs (*10^6): " + l / 1000000);
-				System.out.println(" Freemem (MB):" + (r.freeMemory() >> 20));
+				IO.println(" Freemem (MB):" + (r.freeMemory() >> 20));
 			}
 			// La memoria libera si vedrà calare lentamente
 			// e poi riprendersi di colpo, ciclicamente

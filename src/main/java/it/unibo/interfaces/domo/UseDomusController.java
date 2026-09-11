@@ -1,4 +1,5 @@
 package it.unibo.interfaces.domo;
+import java.io.IO;
 
 public class UseDomusController {
     public static void main(String[] s) {
@@ -18,6 +19,6 @@ public class UseDomusController {
     	
     	// Verifico l'accensione
     	final boolean b = dc.isCompletelySwitchedOn(); // true
-	    System.out.println("Completely switched on: " + b);
+	    IO.println("Completely switched on: " + b);
 	}
 }

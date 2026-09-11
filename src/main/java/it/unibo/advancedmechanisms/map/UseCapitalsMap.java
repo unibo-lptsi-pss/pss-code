@@ -1,22 +1,23 @@
 package it.unibo.advancedmechanisms.map;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseCapitalsMap {
 	public static void main(String[] args){
 		CapitalsMap cmap = new CapitalsMap();
-		System.out.println("Capital of Italy: "+cmap.get("Italy"));
-		System.out.println("Capital of Spain: "+cmap.get("Spain"));
-		System.out.println("All CapitalsMap: "+cmap);
+		IO.println("Capital of Italy: "+cmap.get("Italy"));
+		IO.println("Capital of Spain: "+cmap.get("Spain"));
+		IO.println("All CapitalsMap: "+cmap);
 		
 		// Iterazione "lenta" su una mappa
 		for (final String key: cmap.keySet()){
-			System.out.println("K,V: "+key+" "+cmap.get(key));
+			IO.println("K,V: "+key+" "+cmap.get(key));
 		}
 		
 		// Iterazione veloce su una mappa
 		for (final Map.Entry<String, String> entry: cmap.entrySet()){
-			System.out.println("E: "+entry+" "+entry.getKey()+" "+entry.getValue());
+			IO.println("E: "+entry+" "+entry.getKey()+" "+entry.getValue());
 		}
 	}
 }

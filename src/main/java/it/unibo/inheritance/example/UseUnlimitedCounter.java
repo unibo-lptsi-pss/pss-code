@@ -1,14 +1,15 @@
 package it.unibo.inheritance.example;
+import java.io.IO;
 
 public class UseUnlimitedCounter {
 	public static void main(String[] s) {
 		final UnlimitedCounter uc = new UnlimitedCounter();
-		System.out.println("isOver: " + uc.isOver()); // false
-		System.out.println("LifeTime: " + uc.getDistanceToLimit());
+		IO.println("isOver: " + uc.isOver()); // false
+		IO.println("LifeTime: " + uc.getDistanceToLimit());
 		uc.increment();
 		uc.increment();
 		uc.increment();
-		System.out.println("isOver: " + uc.isOver()); // false
-		System.out.println("LifeTime: " + uc.getDistanceToLimit());
+		IO.println("isOver: " + uc.isOver()); // false
+		IO.println("LifeTime: " + uc.getDistanceToLimit());
 	}
 }

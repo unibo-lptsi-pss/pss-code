@@ -1,4 +1,5 @@
 package it.unibo.exceptions.classes;
+import java.io.IO;
 
 public class UseRange3 {
     public static void main(String[] s) {
@@ -9,19 +10,19 @@ public class UseRange3 {
     	    r = new RangeIterator(a,b);
     	    System.out.print(r.next()+" ");
     	    System.out.print(r.next()+" ");
-    	    System.out.println(r.next());
+    	    IO.println(r.next());
     	    throw new Error();
     	} catch (ArrayIndexOutOfBoundsException e) {
-    	    System.out.println("Servono almeno due argomenti!");
+    	    IO.println("Servono almeno due argomenti!");
     	} catch (NumberFormatException e) {
-    	    System.out.println("Servono argomenti interi!");
+    	    IO.println("Servono argomenti interi!");
     	} catch (IllegalArgumentException e) {
-    	    System.out.println(e);
+    	    IO.println(e);
     	} catch (Exception e) { //ogni altra eccezione
     	    throw e; // rilancio l'eccezione
     	} finally {
     	    // questo codice comunque eseguito
-    	    System.out.println("bye bye..");
+    	    IO.println("bye bye..");
     	}
     }
 }

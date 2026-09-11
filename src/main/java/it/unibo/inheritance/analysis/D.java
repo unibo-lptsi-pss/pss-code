@@ -1,4 +1,5 @@
 package it.unibo.inheritance.analysis;
+import java.io.IO;
 
 class D extends C {
 	D(int i) {
@@ -6,7 +7,7 @@ class D extends C {
 	}
 	void m() {
 		super.m();
-		System.out.println("D.m.. dopo " + this.i);
+		IO.println("D.m.. dopo " + this.i);
 	}
 	public static void main(String[] s) {
 		new D(5).m(); // Cosa succede?

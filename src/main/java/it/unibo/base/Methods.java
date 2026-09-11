@@ -6,7 +6,7 @@ class Food {
         if (!eatean) {
             eatean = true;
         } else {
-            System.out.println(name + " already consumed");
+            IO.println(name + " already consumed");
         }
     }
 }
@@ -22,7 +22,7 @@ class MicrowaveOven {
         if (power >= 150 && power <= 800) {
             this.power = power;
         } else {
-            System.out.println("Invalid power value, it must be between 150 and 800");
+            IO.println("Invalid power value, it must be between 150 and 800");
         }
     }
 
@@ -30,7 +30,7 @@ class MicrowaveOven {
         if (time >= 0 && time <= 120) { // 2 minuti
             this.time = time;
         } else {
-            System.out.println("Invalid time value, it must be between 0 and 120");
+            IO.println("Invalid time value, it must be between 0 and 120");
         }
     }
 
@@ -38,7 +38,7 @@ class MicrowaveOven {
         if (!content.eatean && !on) {
             this.content = content;
         } else {
-            System.out.println("Cannot place this food!");
+            IO.println("Cannot place this food!");
         }
     }
 
@@ -49,7 +49,7 @@ class MicrowaveOven {
             content = null; // rimuovo il cibo
             return cookedFood;
         } else {
-            System.out.println("Cannot get oven content!");
+            IO.println("Cannot get oven content!");
             return null;
         }
     }
@@ -58,7 +58,7 @@ class MicrowaveOven {
         if (!on && time > 0 && power > 0) {
             on = true;
         } else {
-            System.out.println("On is already set");
+            IO.println("On is already set");
         }
     }
 
@@ -66,7 +66,7 @@ class MicrowaveOven {
         if (on) {
             on = false;
         } else {
-            System.out.println("Off is already set");
+            IO.println("Off is already set");
         }
     }
 }
@@ -80,12 +80,12 @@ void main() {
     oven.setTime(60);
     oven.insertFood(pasta);
     // Leggi lo stato
-    System.out.println(oven.model);
-    System.out.println(oven.power);
-    System.out.println(oven.time);
-    System.out.println(oven.content.name);
+    IO.println(oven.model);
+    IO.println(oven.power);
+    IO.println(oven.time);
+    IO.println(oven.content.name);
     oven.start();
     Food cookedPasta = oven.getContent();
     cookedPasta.consume();
-    System.out.println("Pasta consumed? " + cookedPasta.eatean);
+    IO.println("Pasta consumed? " + cookedPasta.eatean);
 }

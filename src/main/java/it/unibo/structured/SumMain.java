@@ -1,4 +1,5 @@
 package it.unibo.structured;
+import java.io.IO;
 
 class SumMain {
 	public static int sum(int[] array) { // soluzione con for-each
@@ -15,6 +16,6 @@ class SumMain {
 			input[i] = Integer.parseInt(args[i]);
 		}
 		int res = sum(input);
-		System.out.println("Somma : " + res);
+		IO.println("Somma : " + res);
 	}
 }

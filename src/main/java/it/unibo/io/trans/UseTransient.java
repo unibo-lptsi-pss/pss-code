@@ -1,6 +1,7 @@
 package it.unibo.io.trans;
 
 import java.io.*;
+import java.io.IO;
 
 import it.unibo.io.files.UseFile;
 
@@ -10,18 +11,18 @@ public class UseTransient {
 		try (final ObjectOutputStream out = new ObjectOutputStream(
 				new FileOutputStream(UseFile.FILE_NAME))){
 			final CPersona p = new CPersona("Rossi", 1960, false);
-			System.out.println("Prima stampa " + p); // cache vuota
-			System.out.println("Seconda stampa " + p); // cache non vuota
+			IO.println("Prima stampa " + p); // cache vuota
+			IO.println("Seconda stampa " + p); // cache non vuota
 			out.writeObject(new CPersona("Rossi", 1960, false));
 		}
 
-		System.out.println("Ri-carico l'oggetto... ");
+		IO.println("Ri-carico l'oggetto... ");
 
 		try (final ObjectInputStream in = new ObjectInputStream(
 				new FileInputStream(UseFile.FILE_NAME))){
 			final CPersona q = (CPersona) in.readObject(); //attenzione al cast!
-			System.out.println("Prima stampa " + q); // cache vuota
-			System.out.println("Seconda stampa " + q); // cache non vuota
+			IO.println("Prima stampa " + q); // cache vuota
+			IO.println("Seconda stampa " + q); // cache non vuota
 		}
 	}
 }

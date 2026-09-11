@@ -1,4 +1,5 @@
 package it.unibo.collections.generic.exercise;
+import java.io.IO;
 
 public class UseGraph {
 	public static void main(String[] args) {
@@ -16,11 +17,11 @@ public class UseGraph {
 		g.addEdge("d", "e");
 		g.addEdge("c", "a");
 
-		System.out.println(g.nodeSet());
+		IO.println(g.nodeSet());
 		// ["a","b","c","d","e"].. in any order
-		System.out.println(g.linkedNodes("c"));
+		IO.println(g.linkedNodes("c"));
 		// ["d","a"].. in any order
-		System.out.println(g.getPath("b", "a"));
+		IO.println(g.getPath("b", "a"));
 		// either the path b,c,a or b,c,d,e,a
 	}
 }

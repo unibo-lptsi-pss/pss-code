@@ -1,14 +1,15 @@
 package it.unibo.encapsulation;
+import java.io.IO;
 
 public class UseCounter {
 	
 	public static void main(String[] args) {
 		Counter c = new Counter();
-		System.out.println(c.getValue()); // 0
+		IO.println(c.getValue()); // 0
 		c.increment();
 		c.increment();
 		c.increment();
 		c.increment();
-		System.out.println(c.getValue()); // 4
+		IO.println(c.getValue()); // 4
 	}
 }

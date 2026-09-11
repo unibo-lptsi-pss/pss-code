@@ -1,6 +1,7 @@
 package it.unibo.lambdas.first;
 
 import java.util.List;
+import java.io.IO;
 
 public class RunnableUtility {
     private static void repeat(final int howMany, final Runnable r) {
@@ -16,12 +17,12 @@ public class RunnableUtility {
     }
 
     static void main() {
-        repeat(10, () -> System.out.println("ok"));
+        repeat(10, () -> IO.println("ok"));
         batchExecution(
             List.of(
-                () -> System.out.println("a"),
-                () -> System.out.println("b"),
-                () -> System.out.println("c"),
+                () -> IO.println("a"),
+                () -> IO.println("b"),
+                () -> IO.println("c"),
                 () -> System.exit(0)
             )
         );

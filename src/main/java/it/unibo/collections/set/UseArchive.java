@@ -1,4 +1,5 @@
 package it.unibo.collections.set;
+import java.io.IO;
 
 public class UseArchive {
 	public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class UseArchive {
 		arc.add("Neri", 1968, true);
 		arc.remove("Neri", 1968);
 
-		System.out.println(arc.size()); // 3
-		System.out.println(arc.allMarried()); // [Bianchi,Verdi]
+		IO.println(arc.size()); // 3
+		IO.println(arc.allMarried()); // [Bianchi,Verdi]
 	}
 }

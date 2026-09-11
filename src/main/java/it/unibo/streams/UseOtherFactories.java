@@ -2,6 +2,7 @@ package it.unibo.streams;
 
 import java.nio.file.*;
 import java.nio.charset.*;
+import java.io.IO;
 
 public class UseOtherFactories {
 	private final static String aDir = "/home/mirko/aula";
@@ -10,24 +11,24 @@ public class UseOtherFactories {
 	public static void main(String[] args) throws Exception {
 		final Path dirPath = FileSystems.getDefault().getPath(aDir);
 		
-		System.out.println("Found below "+aDir);
+		IO.println("Found below "+aDir);
 		Files.find(dirPath, 2, (a,b)->true).forEach(System.out::println);
 	    
-		System.out.println("List directory "+aDir);
+		IO.println("List directory "+aDir);
 		Files.list(dirPath).forEach(System.out::println);
 	    
 		final Path filePath = FileSystems.getDefault().getPath(aFile);
 	    
-		System.out.println("Contenuto of "+aFile);
+		IO.println("Contenuto of "+aFile);
 		Files.lines(filePath).forEach(System.out::println);
 	    
-		System.out.println("Contenuto of "+aFile+" in altra codifica");
+		IO.println("Contenuto of "+aFile+" in altra codifica");
 		Files.lines(filePath,StandardCharsets.ISO_8859_1).forEach(System.out::println);
 	    
 		// Si veda il sorgente di BufferedReader.lines() per capire come si realizza
 		// uno stream a partire da un iteratore
 		
-		System.out.println("Stream da una stringa..");
+		IO.println("Stream da una stringa..");
 		"Hellò!".chars().mapToObj(i->(char)i).forEach(System.out::println);
 	}
 }

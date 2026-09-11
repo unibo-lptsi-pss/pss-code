@@ -1,4 +1,5 @@
 package it.unibo.exceptions.classes;
+import java.io.IO;
 
 public class UseMyException {
     public static void main(String[] s) {
@@ -6,9 +7,9 @@ public class UseMyException {
     		final int a = Integer.parseInt(s[0]);
     		final int b = Integer.parseInt(s[1]);
     		final var iterator = java.util.List.of(a, b).iterator();
-    		System.out.println(iterator.next());
-    		System.out.println(iterator.next());
-    		System.out.println(iterator.next()); // Exception
+    		IO.println(iterator.next());
+    		IO.println(iterator.next());
+    		IO.println(iterator.next()); // Exception
     	} catch (Exception e) { // Exception caught!
     		final RuntimeException e2 = new MyException("Re-throwing: " + e, s);
     		throw e2;

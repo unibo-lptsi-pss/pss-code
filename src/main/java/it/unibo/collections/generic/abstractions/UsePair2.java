@@ -1,4 +1,5 @@
 package it.unibo.collections.generic.abstractions;
+import java.io.IO;
 
 public class UsePair2{
     public static void main(String[] s){
@@ -11,8 +12,8 @@ public class UsePair2{
     	String str = v.getElementAt(0).getFirst() + " " + 
     		     v.getElementAt(1).getFirst() + " " +
     		     v.getElementAt(2).getFirst(); // Nota, nessun cast!
-        System.out.println(str);
-        System.out.println(v);
+        IO.println(str);
+        IO.println(v);
         
         // Inferenza grazie agli argomenti e tipo variabile..
         List<Pair<Integer,Integer>> l = 
@@ -20,7 +21,7 @@ public class UsePair2{
           new List<>(new Pair<>(2,2),
           new List<>(new Pair<>(3,3),
           null)));
-        System.out.println(l);
+        IO.println(l);
     }
 }
 

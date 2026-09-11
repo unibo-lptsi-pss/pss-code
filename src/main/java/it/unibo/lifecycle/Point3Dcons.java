@@ -1,4 +1,5 @@
 package it.unibo.lifecycle;
+import java.io.IO;
 
 public class Point3Dcons {   // dichiarazione classe
     double x;
@@ -16,7 +17,7 @@ public class Point3Dcons {   // dichiarazione classe
         // creo l'oggetto usando il costruttore a tre argomenti
         Point3Dcons p = new Point3Dcons(10.0, 20.0, 30.0);
         // stampo
-        System.out.println("p: " + p.x + "," + p.y + "," + p.z);	
+        IO.println("p: " + p.x + "," + p.y + "," + p.z);	
         // costruttore di "default" in questo caso non funziona!
         // Point3D p2 = new Point3D(); NO!!
     }

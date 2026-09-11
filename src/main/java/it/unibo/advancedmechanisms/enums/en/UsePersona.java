@@ -2,6 +2,7 @@ package it.unibo.advancedmechanisms.enums.en;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.io.IO;
 
 public class UsePersona {
 	public static void main(String[] args){
@@ -11,14 +12,14 @@ public class UsePersona {
 		list.add(new Persona("Carlo","Verdi","EmiliaRomagna")); 
 		// Errore sul nome non intercettabile
 		final List<Persona> out = Persona.fromRegione(list,"Emilia-Romagna");
-		System.out.println(list);
+		IO.println(list);
 		// [[Mario,Rossi,Emilia-Romagna], [Gino,Bianchi,Sicilia], 
 		//    [Carlo,Verdi,EmiliaRomagna]]
-		System.out.println(out);
+		IO.println(out);
 		// [[Mario,Rossi,Emilia-Romagna]]
 		for (final Persona p: list){
 			if (p.isIsolano()){
-				System.out.println(p);
+				IO.println(p);
 			}
 		}
 		// [Gino,Bianchi,Sicilia]

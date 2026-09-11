@@ -1,6 +1,7 @@
 package it.unibo.streams;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseTerminations {
 	public static void main(String[] args) {
@@ -12,23 +13,23 @@ public class UseTerminations {
 		li.stream().forEachOrdered(i->System.out.print(" "+i));
 		
 		final Integer[] array = li.stream().toArray(i->new Integer[i]);
-		System.out.println("\nToArray:\t "+Arrays.toString(array));
+		IO.println("\nToArray:\t "+Arrays.toString(array));
 		
 		//Integer sum = li.stream().reduce(0,(x,y)->x+y);
 		final Integer sum = li.stream().reduce(0,Integer::sum);
-		System.out.println("Sum:\t\t "+sum);
+		IO.println("Sum:\t\t "+sum);
 		
 		//Optional<Integer> max = li.stream().max((x,y)->x-y);
 		final Optional<Integer> max = li.stream().max(Integer::compare);
-		System.out.println("Max:\t\t "+max);
+		IO.println("Max:\t\t "+max);
 				
 		final long count = li.stream().count();
-		System.out.println("Count:\t\t "+count);
+		IO.println("Count:\t\t "+count);
 		
 		final boolean anyMatch = li.stream().anyMatch(x -> x==100);
-		System.out.println("AnyMatch:\t "+anyMatch);
+		IO.println("AnyMatch:\t "+anyMatch);
 		
 		final Optional<Integer> findAny = li.stream().findAny();
-		System.out.println("FindAny:\t "+findAny);
+		IO.println("FindAny:\t "+findAny);
 	}
 }

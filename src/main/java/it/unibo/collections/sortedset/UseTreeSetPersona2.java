@@ -1,6 +1,7 @@
 package it.unibo.collections.sortedset;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseTreeSetPersona2 {
 	public static void main(String[] s) {
@@ -15,7 +16,7 @@ public class UseTreeSetPersona2 {
 
 		// Iterazione in ordine
 		for (final Persona p : set) {
-			System.out.println(p);
+			IO.println(p);
 		}
 	}
 }

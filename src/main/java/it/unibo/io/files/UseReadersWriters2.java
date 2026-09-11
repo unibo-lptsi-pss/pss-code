@@ -2,6 +2,7 @@ package it.unibo.io.files;
 
 import java.io.*;
 import java.util.*;
+import java.io.IO;
 
 public class UseReadersWriters2 {
 	public static void main(String[] args) throws Exception{
@@ -14,14 +15,14 @@ public class UseReadersWriters2 {
 		list.add(r.readLine());
 		r.close();
 		
-		System.out.println(list);
+		IO.println(list);
 		
 		for (int i=0;i<list.size();i++){
 			String s = list.get(i);
 			list.set(i, "A"+s);
 		}
 		
-		System.out.println(list);
+		IO.println(list);
 
 		
 		FileWriter file = new FileWriter(UseReadersWriters.FILE_NAME);

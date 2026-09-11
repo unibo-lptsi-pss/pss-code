@@ -1,6 +1,7 @@
 package it.unibo.exceptions.safedevices;
 
 import java.io.*;
+import java.io.IO;
 
 /**
  * This class provides an implementation of the View simply using the console
@@ -20,8 +21,8 @@ public class ConsoleView implements View {
 
 	public void redraw() {
 		System.out.print(CLEAR_CONSOLE);
-		System.out.println(this.rowString);
-		System.out.println(this.logString);
+		IO.println(this.rowString);
+		IO.println(this.logString);
 	}
 
 	public void setRowStatus(final String s) {

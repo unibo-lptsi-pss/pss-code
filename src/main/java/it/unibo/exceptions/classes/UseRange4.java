@@ -1,4 +1,5 @@
 package it.unibo.exceptions.classes;
+import java.io.IO;
 
 public class UseRange4 {
     public static void main(String[] s) {
@@ -9,13 +10,13 @@ public class UseRange4 {
     	    r = new RangeIterator(a,b);
     	    System.out.print(r.next() + " ");
     	    System.out.print(r.next() + " ");
-    	    System.out.println(r.next());
+    	    IO.println(r.next());
     	} catch (Exception e) { //ogni altra eccezione
     	    throw e; // rilancio l'eccezione
     	    // dovrebbe dare un errore di compilazione: BUG?
     	} finally {
     	    // questo codice comunque eseguito
-    	    System.out.println("bye bye..");
+    	    IO.println("bye bye..");
     	}
     }
 }

@@ -1,4 +1,5 @@
 package it.unibo.polymorphism.last;
+import java.io.IO;
 
 /* Everything is an Object, ma quale?? */
 public class AObject2 {
@@ -16,12 +17,12 @@ public class AObject2 {
 	public static void printAllAndSum(final Object[] array) {
 		int sum = 0;
 		for (final Object o : array) {
-			System.out.println("Oggetto:" + o.toString());
+			IO.println("Oggetto:" + o.toString());
 			if (o instanceof Integer) { // test a runtime
 				final Integer i = (Integer) o; // (down)cast
 				sum = sum + i.intValue();
 			}
 		}
-		System.out.println("Somme degli Integer: " + sum);
+		IO.println("Somme degli Integer: " + sum);
 	}
 }

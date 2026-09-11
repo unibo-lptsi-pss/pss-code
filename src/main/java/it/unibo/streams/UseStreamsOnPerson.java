@@ -1,6 +1,7 @@
 package it.unibo.streams;
 
 import java.util.List;
+import java.io.IO;
 
 public class UseStreamsOnPerson {
     static void main() {
@@ -16,7 +17,7 @@ public class UseStreamsOnPerson {
             .filter(it -> "Cesena".equals(it.getCity())) // Tieni solo i cesenati
             .mapToDouble(Person::getIncome) // Prendi il loro reddito
             .sum(); // Somma
-        System.out.println(result);
+        IO.println(result);
 
         // alternativa con iteratore: qual è la più leggibile?
         double totalIncome = 0; // inizializza somma
@@ -25,6 +26,6 @@ public class UseStreamsOnPerson {
                 totalIncome = totalIncome + p.getIncome(); // allora la somma aumenta del suo reddito
             }
         }
-        System.out.println(totalIncome);
+        IO.println(totalIncome);
     }
 }

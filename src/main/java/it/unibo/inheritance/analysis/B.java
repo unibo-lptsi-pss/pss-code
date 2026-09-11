@@ -1,13 +1,14 @@
 package it.unibo.inheritance.analysis;
+import java.io.IO;
 
 class B extends A {
 	protected String s;
 
 	public B(String s, int i) {
 		super(i);
-		System.out.println("B().. prima " + this.s + " " + this.i);
+		IO.println("B().. prima " + this.s + " " + this.i);
 		this.s = s;
-		System.out.println("B().. dopo " + this.s + " " + this.i);
+		IO.println("B().. dopo " + this.s + " " + this.i);
 	}
 	
 	public static void main(String[] s) {

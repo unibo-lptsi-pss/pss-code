@@ -1,4 +1,5 @@
 package it.unibo.patterns.templatemethod.bank;
+import java.io.IO;
 
 public class MyBankAccount {
 	private int amount;
@@ -20,6 +21,6 @@ public class MyBankAccount {
 	public static void main(String[] args){
 		MyBankAccount b = new MyBankAccount(100,n->n<10?0:1);
 		b.withdraw(20);
-		System.out.println(b.getAmount());// 79
+		IO.println(b.getAmount());// 79
 	}
 }

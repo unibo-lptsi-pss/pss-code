@@ -1,4 +1,5 @@
 package it.unibo.inheritance.analysis;
+import java.io.IO;
 
 class F extends E {
 	void n() {
@@ -8,6 +9,6 @@ class F extends E {
 		F f = new F();
 		f.i = 10;
 		f.m();
-		System.out.println("" + f.i);
+		IO.println("" + f.i);
 	}
 }

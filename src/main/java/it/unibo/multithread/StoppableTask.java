@@ -1,4 +1,5 @@
 package it.unibo.multithread;
+import java.io.IO;
 
 public class StoppableTask implements Runnable {
     private StopSignal stopSignal;
@@ -9,7 +10,7 @@ public class StoppableTask implements Runnable {
     public void run() {
         while (!stopSignal.shouldStop()) {
             // Esegui il lavoro
-            System.out.println("Working...");
+            IO.println("Working...");
         }
     }
 
@@ -28,6 +29,6 @@ class StopTaskDemo {
         // Richiedi di fermare il task
         task.kill();
         taskThread.join();
-        System.out.println("Task stopped.");
+        IO.println("Task stopped.");
     }
 }

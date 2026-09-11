@@ -1,4 +1,5 @@
 package it.unibo.patterns.templatemethod.bank;
+import java.io.IO;
 
 public abstract class BankAccount {
 	private int amount;
@@ -20,7 +21,7 @@ public abstract class BankAccount {
 	public static void main(String[] args){
 		final BankAccount b = new BankAccountWithConstantFee(100);
 		b.withdraw(20);
-		System.out.println(b.getAmount()); // 79
+		IO.println(b.getAmount()); // 79
 	}
 }
 

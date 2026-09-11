@@ -1,12 +1,13 @@
 package it.unibo.inheritance.pre;
+import java.io.IO;
 
 public class UseCounter {
 	public static void main(String[] s) {
 		final Counter c = new Counter(0);
 
-		System.out.println(c.getValue()); // 0
+		IO.println(c.getValue()); // 0
 		c.increment();
 		c.increment();
-		System.out.println(c.getValue()); // 2
+		IO.println(c.getValue()); // 2
 	}
 }

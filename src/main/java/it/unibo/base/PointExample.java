@@ -26,6 +26,6 @@ void main() {
     q.build(10.0, 20.0, 31.0); // inizializza il punto q
     double m2 = p.getNormSquared(); // ottiene la norma al quadrato
     boolean samePoint = p.equal(q); // chiedo a p se è uguale a q
-    System.out.println(samePoint);
-    System.out.println(m2);
+    IO.println(samePoint);
+    IO.println(m2);
 }

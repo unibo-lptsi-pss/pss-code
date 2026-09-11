@@ -1,6 +1,7 @@
 package it.unibo.advancedmechanisms.enums.en2;
 
 import static it.unibo.advancedmechanisms.enums.en2.Regione.*;
+import java.io.IO;
 
 import java.util.*;
 
@@ -15,10 +16,10 @@ public class UseRegione {
 		list.add(Regione.values()[10]);
 		
 		for (final Regione r: list){
-			System.out.println("toString "+r); // LOMBARDIA,...,MOLISE
-			System.out.println("ordinale "+r.ordinal()); // 8, 13, 14, 10
-			System.out.println("nome "+r.name()); // LOMBARDIA,...,MOLISE
-			System.out.println("---");
+			IO.println("toString "+r); // LOMBARDIA,...,MOLISE
+			IO.println("ordinale "+r.ordinal()); // 8, 13, 14, 10
+			IO.println("nome "+r.name()); // LOMBARDIA,...,MOLISE
+			IO.println("---");
 		}
 		
 		for (final Regione r: Regione.values()){

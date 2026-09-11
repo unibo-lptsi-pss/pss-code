@@ -1,6 +1,7 @@
 package it.unibo.structured;
 
 import java.util.Arrays; // Classe con funzioni di utilità
+import java.io.IO;
 
 class Reverse {
 	static int[] reverse(int[] array) { // funzione reverse
@@ -15,7 +16,7 @@ class Reverse {
 	public static void main(String[] s) { // prova funz. di reverse
 		int[] a = new int[] { 10, 20, 30, 40 };
 		int[] b = reverse(a);
-		System.out.println(Arrays.toString(a)); // [10, 20, 30, 40]
-		System.out.println(Arrays.toString(b)); // [40, 30, 20, 10]
+		IO.println(Arrays.toString(a)); // [10, 20, 30, 40]
+		IO.println(Arrays.toString(b)); // [40, 30, 20, 10]
 	}
 }

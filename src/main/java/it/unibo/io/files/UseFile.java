@@ -4,6 +4,7 @@ import java.io.File;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.io.IO;
 
 public class UseFile {
 	public static final String FILE_NAME =
@@ -23,7 +24,7 @@ public class UseFile {
 	public static void main(String[] args) throws Exception {
 		final File f = new File( args.length == 0 ? FILE_NAME : args[0]);
 		for (final Method m : accessors(File.class)) {
-			System.out.println(m.getName() + " " + m.invoke(f));
+			IO.println(m.getName() + " " + m.invoke(f));
 		}
 	}
 }

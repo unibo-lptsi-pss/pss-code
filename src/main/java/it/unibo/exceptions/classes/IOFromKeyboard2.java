@@ -1,6 +1,7 @@
 package it.unibo.exceptions.classes;
 
 import java.io.*;
+import java.io.IO;
 
 public class IOFromKeyboard2 {
 	private static final BufferedReader KBD = 
@@ -14,11 +15,11 @@ public class IOFromKeyboard2 {
 		try {
 			System.out.print("Inserisci un numero: ");
 			final int a = getIntFromKbd();
-			System.out.println("Hai inserito il num.: " + a);
+			IO.println("Hai inserito il num.: " + a);
 		} catch (IOException e) {
-			System.out.println("Errore di I/O: " + e);
+			IO.println("Errore di I/O: " + e);
 		} catch (NumberFormatException e) {
-			System.out.println(e);
+			IO.println(e);
 		}
 	}
 }

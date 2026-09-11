@@ -1,4 +1,5 @@
 package it.unibo.lifecycle;
+import java.io.IO;
 
 class Point3Dvar {  // dichiarazione classe
     double x;
@@ -15,6 +16,6 @@ class Point3Dvar {  // dichiarazione classe
         //creo l'oggetto usando il costruttore a tre argomenti
         Point3Dvar p = new Point3Dvar(10.0, 20.0, 30.0);
         // stampo
-        System.out.println("p: " + p.x + "," + p.y + "," + p.z);	
+        IO.println("p: " + p.x + "," + p.y + "," + p.z);	
     }
 }

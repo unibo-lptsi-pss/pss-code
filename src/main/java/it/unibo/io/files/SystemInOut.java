@@ -1,13 +1,14 @@
 package it.unibo.io.files;
 
 import java.io.*;
+import java.io.IO;
 
 public class SystemInOut {
 	public static void main(String[] args) throws Exception{
 
 		final InputStream is = System.in;
 		final BufferedReader br = new BufferedReader(new InputStreamReader(is));
-		System.out.println(br.readLine()); // può lanciare una IOException
+		IO.println(br.readLine()); // può lanciare una IOException
 		
 		final PrintStream ps = System.out; 
 		// una sotto-classe di OutputStream, che incapsula un Writer

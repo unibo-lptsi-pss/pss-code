@@ -1,4 +1,5 @@
 package it.unibo.encapsulation.bad;
+import java.io.IO;
 
 public class CounterFunctions {
     static CounterValue increment(CounterValue cv) {
@@ -7,6 +8,6 @@ public class CounterFunctions {
 
     public static void main(String[] args){
         CounterValue result = CounterFunctions.increment(new CounterValue(10));
-        System.out.println("Result: " + result.value);
+        IO.println("Result: " + result.value);
     } 
 }

@@ -1,4 +1,5 @@
 package it.unibo.generics.iterators;
+import java.io.IO;
 
 public class PairReplacer<X, Y> {
 
@@ -19,8 +20,8 @@ public class PairReplacer<X, Y> {
     static void main() {
         final var replacer = new PairReplacer<>(new Pair<>("Hello", 42));
         final var newFirstPair = replacer.replaceFirst(3.14); // Con inferenza, uso tipico
-        System.out.println("Replaced First: " + newFirstPair);
+        IO.println("Replaced First: " + newFirstPair);
         Pair<String, Boolean> newSecondPair = replacer.<Boolean>replaceSecond(true); // Senza inferenza
-        System.out.println("Replaced Second: " + newSecondPair);
+        IO.println("Replaced Second: " + newSecondPair);
     }
 }

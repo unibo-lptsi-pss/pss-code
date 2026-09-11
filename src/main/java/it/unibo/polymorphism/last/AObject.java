@@ -1,6 +1,7 @@
 package it.unibo.polymorphism.last;
 
 import java.util.Arrays;
+import java.io.IO;
 
 /* Tutti gli oggetti possono formare un elenco Object[] */
 public class AObject {
@@ -12,13 +13,13 @@ public class AObject {
 		os[3] = new int[] { 10, 20, 30 };
 		os[4] = new java.util.Date();
 		printAll(os);
-		System.out.println(Arrays.toString(os));
-		System.out.println(Arrays.deepToString(os));
+		IO.println(Arrays.toString(os));
+		IO.println(Arrays.deepToString(os));
 	}
 	
 	public static void printAll(final Object[] array) {
 		for (final Object o : array) {
-			System.out.println("Oggetto:" + o.toString());
+			IO.println("Oggetto:" + o.toString());
 		}
 	}
 }

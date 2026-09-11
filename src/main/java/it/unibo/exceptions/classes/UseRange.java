@@ -1,4 +1,5 @@
 package it.unibo.exceptions.classes;
+import java.io.IO;
 
 public class UseRange{
     public static void main(String[] args) {
@@ -10,11 +11,11 @@ public class UseRange{
     	try {
     		System.out.print(r.next()+" ");
     		System.out.print(r.next()+" ");
-    		System.out.println(r.next());
+    		IO.println(r.next());
     	} catch (final java.util.NoSuchElementException e){
-    		System.out.println("eccezione.. ma il programma continua "+e.toString());
+    		IO.println("eccezione.. ma il programma continua "+e.toString());
     	}
-    	System.out.println("fine programma");
+    	IO.println("fine programma");
     }
 }
 /* Esecuzione: java UseRange 5 10

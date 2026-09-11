@@ -1,4 +1,5 @@
 package it.unibo.lambdas.interfaces;
+import java.io.IO;
 
 public class UseSimpleIterator {	
 	public static void main(String[] args){
@@ -6,7 +7,7 @@ public class UseSimpleIterator {
 		final SimpleIterator<Integer> si = 
 				() -> {c.inc(); return c.getValue();};
 		
-		System.out.println(si.getNext());
-		System.out.println(si.getListOfNext(20));
+		IO.println(si.getNext());
+		IO.println(si.getListOfNext(20));
 	}
 }

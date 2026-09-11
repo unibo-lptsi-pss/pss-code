@@ -1,4 +1,5 @@
 package it.unibo.generics.generics;
+import java.io.IO;
 
 public class UsePair2 {
     public static void main(String[] s) {
@@ -9,7 +10,7 @@ public class UsePair2 {
         v.addElement(new Pair<>("Vettore", 2));
         final int v1second = v.getElementAt(1).getSecond(); // Nota, nessun cast!
         final String str = v.getElementAt(0).getFirst() + " " + v1second;
-        System.out.println(str);
-        System.out.println(v);
+        IO.println(str);
+        IO.println(v);
     }
 }

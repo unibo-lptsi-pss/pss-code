@@ -1,6 +1,7 @@
 package it.unibo.io.files;
 
 import java.io.*;
+import java.io.IO;
 
 public class UseReadersWriters {
 	public static final String FILE_NAME = "/home/mirko/aula/oop/15/a.txt"; // TODO: fix path
@@ -17,16 +18,16 @@ public class UseReadersWriters {
 		try (
 			final BufferedReader r = new BufferedReader(new FileReader(FILE_NAME))
 		) {
-			System.out.println(r.readLine());
-			System.out.println(r.readLine());
-			System.out.println(r.readLine()); // null, indica la fine del file!
+			IO.println(r.readLine());
+			IO.println(r.readLine());
+			IO.println(r.readLine()); // null, indica la fine del file!
 		}
 		try (
 			final BufferedReader r = new BufferedReader(new FileReader(FILE_NAME))
 		) {
 		    String line = null;
 		    while( (line = r.readLine()) != null){
-		        System.out.println(line);
+		        IO.println(line);
 		    }
 		}
 	}

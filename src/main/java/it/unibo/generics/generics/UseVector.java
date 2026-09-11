@@ -1,4 +1,5 @@
 package it.unibo.generics.generics;
+import java.io.IO;
 
 public class UseVector {
 	public static void main(String[] s) {
@@ -11,7 +12,7 @@ public class UseVector {
     	final String str = vs.getElementAt(0) + " " + 
     		vs.getElementAt(1) + " " +
     		vs.getElementAt(2); // Nota, nessun cast!
-    	System.out.println(str);
+    	IO.println(str);
         
     	final Vector<Integer> vi=new Vector<Integer>(); 
     	vi.addElement(10); // Autoboxing
@@ -20,6 +21,6 @@ public class UseVector {
     	final int i = vi.getElementAt(0) + // Unboxing 
     		vi.getElementAt(1) +
     		vi.getElementAt(2);
-    	System.out.println(i);
+    	IO.println(i);
     }
 }

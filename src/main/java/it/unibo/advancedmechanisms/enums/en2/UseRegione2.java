@@ -1,6 +1,7 @@
 package it.unibo.advancedmechanisms.enums.en2;
 
 import static it.unibo.advancedmechanisms.enums.en2.Regione.*;
+import java.io.IO;
 
 import java.util.*;
 
@@ -17,13 +18,13 @@ public class UseRegione2 {
 		for (final Regione r : list) {
 			switch (r) {
 			case LOMBARDIA:
-				System.out.println("Lombardia");
+				IO.println("Lombardia");
 				break;
 			case EMILIA_ROMAGNA:
-				System.out.println("Emilia Romagna");
+				IO.println("Emilia Romagna");
 				break;
 			default:
-				System.out.println("Altre..");
+				IO.println("Altre..");
 			}
 		}
 	}

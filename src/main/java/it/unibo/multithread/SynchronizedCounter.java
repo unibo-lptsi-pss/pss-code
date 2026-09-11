@@ -1,4 +1,5 @@
 package it.unibo.multithread;
+import java.io.IO;
 
 public class SynchronizedCounter {
     private int counter = 0;
@@ -26,6 +27,6 @@ class SynchronizedCounterDemo {
         thread2.start();
         thread2.join();
         thread1.join();
-        System.out.println("Final counter value: " + shared.getCounter());
+        IO.println("Final counter value: " + shared.getCounter());
     }
 }

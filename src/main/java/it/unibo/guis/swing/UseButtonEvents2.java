@@ -3,20 +3,21 @@ package it.unibo.guis.swing;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.IO;
 
 public class UseButtonEvents2 {
 	public static void main(String[] args) {
 		final JButton b1 = new JButton("Say Hello");
 		b1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Hello!!");
+				IO.println("Hello!!");
 			}
 		}); // Uso una inner class anonima..
 
 		final JButton b2 = new JButton("Quit");
 		b2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Quitting..");
+				IO.println("Quitting..");
 				System.exit(0);
 			}
 		}); // Uso una inner class anonima..

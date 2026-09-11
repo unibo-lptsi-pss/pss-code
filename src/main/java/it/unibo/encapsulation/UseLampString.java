@@ -1,4 +1,5 @@
 package it.unibo.encapsulation;
+import java.io.IO;
 
 public class UseLampString {
   	public static void main(String[] s) {
@@ -8,7 +9,7 @@ public class UseLampString {
         l.dim();
         l.dim();
         l.brighten();
-        System.out.println(l.toString());
-        System.out.println("Oppure : " + l);
+        IO.println(l.toString());
+        IO.println("Oppure : " + l);
     }
 }

@@ -1,6 +1,7 @@
 package it.unibo.generics.wildcard;
 
 import it.unibo.generics.generics.Vector;
+import java.io.IO;
 
 public class Wildcard2 {
     // Metodo che usa la wildcard
@@ -18,7 +19,7 @@ public class Wildcard2 {
         vd.addElement(1.5);
         vd.addElement(6.7);
         Vector<Integer> vi = toIntVector(vd);
-        System.out.println(vi.getElementAt(0) + ", " + vi.getElementAt(1));
+        IO.println(vi.getElementAt(0) + ", " + vi.getElementAt(1));
         // var vd2 = toIntVector(new Vector<String>()); // ERROR: method not applicable
     }
 }

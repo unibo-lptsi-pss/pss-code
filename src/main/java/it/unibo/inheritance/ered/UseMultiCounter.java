@@ -1,14 +1,15 @@
 package it.unibo.inheritance.ered;
+import java.io.IO;
 
 public class UseMultiCounter {
 	public static void main(String[] s) {
 		final MultiCounter mc = new MultiCounter(10);
-		System.out.println(mc.getValue()); // 10
+		IO.println(mc.getValue()); // 10
 		mc.increment();
 		mc.increment();
-		System.out.println(mc.getValue()); // 12
+		IO.println(mc.getValue()); // 12
 		mc.multiIncrement(10);
-		System.out.println(mc.getValue()); // 22
+		IO.println(mc.getValue()); // 22
 		
 	}
 }

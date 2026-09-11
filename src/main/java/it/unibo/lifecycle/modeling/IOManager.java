@@ -1,6 +1,7 @@
 package it.unibo.lifecycle.modeling;
 
 import java.util.Scanner;
+import java.io.IO;
 
 public class IOManager {
     private final Scanner scanner;
@@ -10,7 +11,7 @@ public class IOManager {
     }
 
     public void printLine(String text) {
-        System.out.println(text);
+        IO.println(text);
     }
 
     public int readIntInRange(int min, int max) {
@@ -18,7 +19,7 @@ public class IOManager {
             String line = scanner.nextLine();
             int value = Integer.parseInt(line.trim());
             if (value < min || value > max) {
-                System.out.println("Please enter a number between " + min + " and " + max + ".");
+                IO.println("Please enter a number between " + min + " and " + max + ".");
             } else {
                 return value;
             }

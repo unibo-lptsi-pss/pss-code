@@ -4,5 +4,5 @@ void main() {
 	for (var element: elements) {
 		sum += element;
 	}
-	System.out.println(sum);
+	IO.println(sum);
 }

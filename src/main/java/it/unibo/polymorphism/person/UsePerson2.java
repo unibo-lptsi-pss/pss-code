@@ -1,4 +1,5 @@
 package it.unibo.polymorphism.person;
+import java.io.IO;
 
 public class UsePerson2 {
 
@@ -14,7 +15,7 @@ public class UsePerson2 {
 		for (final Person p : people) {
 			if (p instanceof Student) {
 				final Student s = (Student) p; // Qui non fallisce
-				System.out.println(s.getName() + " " + 
+				IO.println(s.getName() + " " + 
 				                   s.getMatriculationYear());
 			}
 		}

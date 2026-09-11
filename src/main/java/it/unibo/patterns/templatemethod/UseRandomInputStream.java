@@ -2,6 +2,7 @@ package it.unibo.patterns.templatemethod;
 
 import java.io.*;
 import java.util.*;
+import java.io.IO;
 
 public class UseRandomInputStream {
 
@@ -21,7 +22,7 @@ public class UseRandomInputStream {
 		// Ora provo InputStream.read(byte[]) e lo trovo concretizzato
 		final byte[] b = new byte[100];
 		input.read(b);
-		System.out.println(Arrays.toString(b));
+		IO.println(Arrays.toString(b));
 		// [0,1,2,3,4,5,6,..]
 	}
 }

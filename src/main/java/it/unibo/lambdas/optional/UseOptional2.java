@@ -1,17 +1,18 @@
 package it.unibo.lambdas.optional;
 
 import java.util.Optional;
+import java.io.IO;
 
 public class UseOptional2 {
 	public static void main(String[] args) throws Exception {
 
 		final Optional<Integer> opt = Optional.of(10); 
 		final Optional<Integer> opt2 = Optional.empty();
-		System.out.println(opt.isPresent());
-		System.out.println(opt2.isPresent());
+		IO.println(opt.isPresent());
+		IO.println(opt2.isPresent());
 		
 		if (opt.isPresent()){
-			System.out.println(opt.get()); // 10
+			IO.println(opt.get()); // 10
 		} else {
 			System.exit(0);
 		}
@@ -25,9 +26,9 @@ public class UseOptional2 {
 		Optional<Integer> op3 = opt.flatMap(x -> 
 								opt2.flatMap(y ->
 								opt2.flatMap(z -> Optional.of(x+y+z))));
-		System.out.println(op3);
+		IO.println(op3);
 		
-		System.out.println(opt.orElseThrow(()->new Exception())); // 10
-		System.out.println(opt2.orElseThrow(()->new Exception())); // exc
+		IO.println(opt.orElseThrow(()->new Exception())); // 10
+		IO.println(opt2.orElseThrow(()->new Exception())); // exc
 	}
 }

@@ -1,6 +1,7 @@
 package it.unibo.collections.generic.list;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseArrayList {
     public static void main(String[] s) {
@@ -13,7 +14,7 @@ public class UseArrayList {
         }
         final Persona p = new Persona("Rossi", 1967, false);
         int pos = alist.indexOf(p);
-        System.out.println(p + " in position " + pos);
+        IO.println(p + " in position " + pos);
 
         // Iteratore da pos fino in fondo lo uso per eliminare
         final ListIterator<Persona> iterator = alist.listIterator(pos);
@@ -22,7 +23,7 @@ public class UseArrayList {
             iterator.remove();
         }
         for (final Persona p2 : alist) {
-            System.out.println(alist.indexOf(p2) + "\t" + p2);
+            IO.println(alist.indexOf(p2) + "\t" + p2);
         }
         alist.trimToSize(); // riduco le dimensioni
     }

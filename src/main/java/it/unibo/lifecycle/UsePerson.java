@@ -1,4 +1,5 @@
 package it.unibo.lifecycle;
+import java.io.IO;
 
 public class UsePerson {
 	public static void main(String[] s) {
@@ -9,7 +10,7 @@ public class UsePerson {
 
 		Person[] persone = new Person[]{ p2, p3, p4 };
 		for(int i=0; i < persone.length; i++){
-			System.out.println(persone[i].name + ", nato/a nel " + persone[i].birthYear + 
+			IO.println(persone[i].name + ", nato/a nel " + persone[i].birthYear + 
 				(persone[i].isMarried ? "" : ", non") + " è sposato/a.");
 		}
 	}

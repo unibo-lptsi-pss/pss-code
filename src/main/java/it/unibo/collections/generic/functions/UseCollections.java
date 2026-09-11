@@ -1,6 +1,7 @@
 package it.unibo.collections.generic.functions;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseCollections {
     public static void main(String[] s) {
@@ -14,15 +15,15 @@ public class UseCollections {
                 set.add(l2); // aggiungo
             }
         }
-        System.out.println("shuf: " + set); // [[4,1,2,3,0],[3,1,4,0,2],..
+        IO.println("shuf: " + set); // [[4,1,2,3,0],[3,1,4,0,2],..
 
         int ct = 0;
         for (final List<Integer> l : set) {
             Collections.fill(l, ct++);
         }
-        System.out.println("inc: " + set); // [[0,0,0,0,0],[1,1,1,1,1],..
+        IO.println("inc: " + set); // [[0,0,0,0,0],[1,1,1,1,1],..
 
-        System.out.println("cop: " + Collections.nCopies(5, list));
+        IO.println("cop: " + Collections.nCopies(5, list));
         // [[0,1,2,3,4],[0,1,2,3,4],..
     }
 }

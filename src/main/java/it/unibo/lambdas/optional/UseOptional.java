@@ -1,6 +1,7 @@
 package it.unibo.lambdas.optional;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseOptional {
 	public static void main(String[] args) {
@@ -8,12 +9,12 @@ public class UseOptional {
 		//Optional<String> opt = Optional.ofNullable(s);
 		Optional<String> opt = s == null ? Optional.empty() : Optional.of(s);
 		
-		System.out.println("present: "+opt.isPresent());
-		System.out.println("orElse: "+opt.orElse("it is actually null"));
+		IO.println("present: "+opt.isPresent());
+		IO.println("orElse: "+opt.orElse("it is actually null"));
 		try{
-			System.out.println("get: "+opt.get());
+			IO.println("get: "+opt.get());
 		} catch (Exception e){
-			System.out.println("get failed.."+e.getClass());
+			IO.println("get failed.."+e.getClass());
 		}
 		
 		System.out.print("ifPresent..");

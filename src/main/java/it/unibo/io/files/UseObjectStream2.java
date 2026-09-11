@@ -1,6 +1,7 @@
 package it.unibo.io.files;
 
 import java.io.*;
+import java.io.IO;
 
 public class UseObjectStream2 {
 	private static final String STR = "/home/mirko/aula/15/prova.bin";
@@ -17,8 +18,8 @@ public class UseObjectStream2 {
 		// ostream2 -> bstream2 -> file2
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream(STR));
 		// readObject() potrebbe generare un ClassNotFOundException!
-		System.out.println(in.readObject()); // carica il Date
-		System.out.println(in.readObject()); // carica la Persona
+		IO.println(in.readObject()); // carica il Date
+		IO.println(in.readObject()); // carica la Persona
 		in.close();
 	}
 }

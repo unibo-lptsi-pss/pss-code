@@ -1,16 +1,17 @@
 package it.unibo.encapsulation;
+import java.io.IO;
 
 public class UseLamp {
    private static void test1() {
       final Lamp l = new Lamp();
-      System.out.println(l);
+      IO.println(l);
       l.switchOn();
       l.setIntensity(0.5);
       l.dim();
       l.dim();
-      System.out.println(l);
+      IO.println(l);
       l.brighten();
-      System.out.println(l);
+      IO.println(l);
       // Acceso: true Intensità: 0.4
    }
 

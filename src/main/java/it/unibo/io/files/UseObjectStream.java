@@ -1,6 +1,7 @@
 package it.unibo.io.files;
 
 import java.io.*;
+import java.io.IO;
 
 public class UseObjectStream {
     public static void main(String[] args) throws Exception {
@@ -23,10 +24,10 @@ public class UseObjectStream {
             final InputStream bstream2 = new BufferedInputStream(file2);
             final ObjectInputStream ostream2 = new ObjectInputStream(bstream2);
         ){
-            System.out.println(ostream2.readInt());
-            System.out.println(ostream2.readDouble());
-            System.out.println(ostream2.readObject()); // carica il Date
-            System.out.println(ostream2.readObject()); // carica la Persona
+            IO.println(ostream2.readInt());
+            IO.println(ostream2.readDouble());
+            IO.println(ostream2.readObject()); // carica il Date
+            IO.println(ostream2.readObject()); // carica la Persona
         }
     }
 }

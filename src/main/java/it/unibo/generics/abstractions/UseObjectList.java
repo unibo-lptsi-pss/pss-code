@@ -1,4 +1,5 @@
 package it.unibo.generics.abstractions;
+import java.io.IO;
 
 public class UseObjectList {
 	public static void main(String[] s) {
@@ -9,15 +10,15 @@ public class UseObjectList {
 		final int first = (Integer) list.getHead(); // Unboxing
 		final int second = (Integer) list.getTail().getHead();
 		final int third = (Integer) list.getTail().getTail().getHead();
-		System.out.println(first + " " + second + " " + third);
-		System.out.println(list.toString());
-		System.out.println(list.getLength());
+		IO.println(first + " " + second + " " + third);
+		IO.println(list.toString());
+		IO.println(list.getLength());
 
 		// Usabile anche con le stringhe
 		final ObjectList list2 = new ObjectList("a", 
 				new ObjectList("b",
 				new ObjectList("c", 
 				new ObjectList("d", null))));
-		System.out.println(list2.toString());
+		IO.println(list2.toString());
 	}
 }

@@ -3,6 +3,7 @@ package it.unibo.io.files;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.IO;
 
 public class UseByteArrayStream {
     static void main() throws IOException {
@@ -11,10 +12,10 @@ public class UseByteArrayStream {
         try {
             int c = in.read();
             while (c != -1) {
-                System.out.println(c);
+                IO.println(c);
                 c = in.read();
             }
-            System.out.println("End of stream");
+            IO.println("End of stream");
         } finally { // assicura la chiusura anche con eccezioni
             in.close(); // problema: può tirare eccezione!
         }

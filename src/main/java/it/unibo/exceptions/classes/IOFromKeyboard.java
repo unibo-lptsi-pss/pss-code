@@ -1,6 +1,7 @@
 package it.unibo.exceptions.classes;
 
 import java.io.*;
+import java.io.IO;
 
 public class IOFromKeyboard {
 	// La dichiarazione throws qui è obbligatoria!
@@ -15,7 +16,7 @@ public class IOFromKeyboard {
 	public static void main(String[] args) throws Exception {
 			System.out.print("Inserisci un numero: ");
 			int a = getIntFromKbd();
-			System.out.println("Hai inserito il num.: " + a);
+			IO.println("Hai inserito il num.: " + a);
 		
 	}
 }

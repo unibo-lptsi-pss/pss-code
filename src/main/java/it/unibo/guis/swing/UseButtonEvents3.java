@@ -2,15 +2,16 @@ package it.unibo.guis.swing;
 
 import java.awt.*;
 import javax.swing.*;
+import java.io.IO;
 
 public class UseButtonEvents3 {
 	public static void main(String[] args) {
 		final JButton b1 = new JButton("Say Hello");
-		b1.addActionListener(e -> System.out.println("Hello!!")); 
+		b1.addActionListener(e -> IO.println("Hello!!")); 
 
 		final JButton b2 = new JButton("Quit");
 		b2.addActionListener(e -> {
-			System.out.println("Quitting..");
+			IO.println("Quitting..");
 			System.exit(0);
 		});
 

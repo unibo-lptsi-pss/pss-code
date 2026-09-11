@@ -2,6 +2,7 @@ package it.unibo.streams;
 
 import java.util.*;
 import java.util.stream.*;
+import java.io.IO;
 
 public class UseStreamsOnPerson2 {
 	static void main() {
@@ -18,7 +19,7 @@ public class UseStreamsOnPerson2 {
             .flatMap(p->p.getJobs().stream())
             .distinct()
             .collect(Collectors.joining("|", "[[", "]]"));
-		System.out.println(res);
+		IO.println(res);
 		
 		// Average income of professors
 		final double avg = 
@@ -27,8 +28,8 @@ public class UseStreamsOnPerson2 {
 					.mapToDouble(Person::getIncome)
 					.average().getAsDouble();
 		
-		System.out.println(avg);
-		System.out.println(
+		IO.println(avg);
+		IO.println(
 				list.stream()
 				    .filter(p->p.getJobs().contains("Professor"))
 				    .mapToDouble(Person::getIncome).average());

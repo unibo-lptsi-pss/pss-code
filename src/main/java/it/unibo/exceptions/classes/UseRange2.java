@@ -1,4 +1,5 @@
 package it.unibo.exceptions.classes;
+import java.io.IO;
 
 public class UseRange2 {
 	public static void main(String[] s) {
@@ -8,17 +9,17 @@ public class UseRange2 {
 			final int b = Integer.parseInt(s[1]);
 			r = new RangeIterator(a, b);
 		} catch (Exception e) { // catturo una qualsiasi Exception
-			System.out.println("Argomenti errati!");
-			System.out.println(e);
+			IO.println("Argomenti errati!");
+			IO.println(e);
 			System.exit(1); // abnormal termination
 		}
 		try {
 			System.out.print(r.next() + " ");
 			System.out.print(r.next() + " ");
-			System.out.println(r.next());
+			IO.println(r.next());
 		} catch (java.util.NoSuchElementException e) {
-			System.out.println("Iterazione non corretta..");
-			System.out.println(e);
+			IO.println("Iterazione non corretta..");
+			IO.println(e);
 			System.exit(1); // abnormal termination
 		}
 		System.exit(0); // ok termination

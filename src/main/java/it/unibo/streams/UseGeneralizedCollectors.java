@@ -2,6 +2,7 @@ package it.unibo.streams;
 
 import java.util.*;
 import java.util.stream.*;
+import java.io.IO;
 
 public class UseGeneralizedCollectors {
 	public static void main(String[] args) {
@@ -12,14 +13,14 @@ public class UseGeneralizedCollectors {
 				()->new HashSet<>(), 		// oggetto collettore
 				(h,i)->h.add(i),			// aggiunta di un elemento
 				(h,h2)->h.addAll(h2));		// concatenazione due collettori
-		System.out.println("Set: "+set);    // un HashSet coi valori dello stream
+		IO.println("Set: "+set);    // un HashSet coi valori dello stream
 		
 		// Più frequente: uso collect passandogli un collettore general-purpose
 		final Set<Integer> set2 = li.stream().collect(Collector.of(
 				HashSet::new, 							// oggetto collettore
 				HashSet::add,							// aggiunta di un elemento
 				(h,h2)->{h.addAll(h2); return h;}));	// concatenazione due collettori
-		System.out.println("Set: "+set2);
+		IO.println("Set: "+set2);
 		
 		// cosa fa questo collettore? (.. un po' complicato)
 		final int res=li.stream().collect(Collector.of(
@@ -27,6 +28,6 @@ public class UseGeneralizedCollectors {
 				(l,i)->l.set(0,i+l.get(0)),					// aggiunta di un elemento
 				(l,l2)->{l.set(0,l.get(0)+l2.get(0)); return l;}))	// concatenazione
 				.get(0);									// estrazione risultato
-		System.out.println("Res: "+res);		
+		IO.println("Res: "+res);		
 	}
 }

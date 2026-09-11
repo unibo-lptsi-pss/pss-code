@@ -1,6 +1,7 @@
 package it.unibo.collections.sortedset;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseTreeSetPersona {
 	public static void main(String[] s) {
@@ -16,14 +17,14 @@ public class UseTreeSetPersona {
 
 		// Iterazione in ordine, poi al contrario, poi fino al 1970
 		for (final Persona p : set) {
-			System.out.println("Itero: " + p + " hash = " + p.hashCode());
+			IO.println("Itero: " + p + " hash = " + p.hashCode());
 		}
 		for (final Persona p : set.descendingSet()) {
-			System.out.println("Itero al contrario: " + p);
+			IO.println("Itero al contrario: " + p);
 		}
 		final Persona limit = new Persona("", 1970, false);
 		for (final Persona p : set.headSet(limit, false)) {
-			System.out.println("Itero fino al 1970: " + p);
+			IO.println("Itero fino al 1970: " + p);
 		}
 	}
 }

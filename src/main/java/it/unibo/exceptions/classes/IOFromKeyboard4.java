@@ -1,4 +1,5 @@
 package it.unibo.exceptions.classes;
+import java.io.IO;
 
 public class IOFromKeyboard4 {
 	// L'uso di System.console().readLine() non lancia eccezioni
@@ -6,7 +7,7 @@ public class IOFromKeyboard4 {
 		while (true) {
 			System.out.print("Inserisci un numero: ");
 			final int a = Integer.parseInt(System.console().readLine());
-			System.out.println("Hai inserito il num.: " + a);
+			IO.println("Hai inserito il num.: " + a);
 		}
 	}
 }

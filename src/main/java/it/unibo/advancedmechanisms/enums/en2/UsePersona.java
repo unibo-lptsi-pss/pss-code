@@ -1,6 +1,7 @@
 package it.unibo.advancedmechanisms.enums.en2;
 
 import java.util.*;
+import java.io.IO;
 
 public class UsePersona {
 	public static void main(String[] args){
@@ -10,14 +11,14 @@ public class UsePersona {
 		list.add(new Persona("Carlo","Verdi",Regione.LOMBARDIA));
 		final List<Persona> out = 
 		    Persona.fromRegione(list,Regione.EMILIA_ROMAGNA); 
-		System.out.println(list);
+		IO.println(list);
 		// [[Mario,Rossi,EMILIA_ROMAGNA], [Gino,Bianchi,SICILIA], 
 		// [Carlo,Verdi,LOMBARDIA]]
-		System.out.println(out);
+		IO.println(out);
 		// [[Mario,Rossi,EMILIA_ROMAGNA]]
 		for (final Persona p: list){
 			if (p.isIsolano()){
-				System.out.println(p);
+				IO.println(p);
 			}
 		}
 		// [Gino,Bianchi,SICILIA]

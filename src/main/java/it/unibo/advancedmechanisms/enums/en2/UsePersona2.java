@@ -1,6 +1,7 @@
 package it.unibo.advancedmechanisms.enums.en2;
 
 import static it.unibo.advancedmechanisms.enums.en2.Regione.*;
+import java.io.IO;
 
 import java.util.*;
 
@@ -11,14 +12,14 @@ public class UsePersona2 {
 		list.add(new Persona("Gino", "Bianchi", SICILIA));
 		list.add(new Persona("Carlo", "Verdi", LOMBARDIA));
 		final List<Persona> out = Persona.fromRegione(list, EMILIA_ROMAGNA); 
-		System.out.println(list);
+		IO.println(list);
 		// [[Mario,Rossi,EMILIA_ROMAGNA], [Gino,Bianchi,SICILIA], 
 		// [Carlo,Verdi,LOMBARDIA]]
-		System.out.println(out);
+		IO.println(out);
 		// [[Mario,Rossi,EMILIA_ROMAGNA]]
 		for (final Persona p: list){
 			if (p.isIsolano()){
-				System.out.println(p);
+				IO.println(p);
 			}
 		}
 		// [Gino,Bianchi,SICILIA]

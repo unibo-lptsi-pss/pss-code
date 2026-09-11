@@ -2,6 +2,7 @@ package it.unibo.collections.generic.map;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.io.IO;
 
 public class UseMap {
     static void main() {
@@ -10,18 +11,18 @@ public class UseMap {
         map.put(345211, "Bianchi");
         map.put(345122, "Rossi");
         map.put(243001, "Verdi");
-        System.out.println(map); // {345211=Bianchi, 243001=Verdi, 345122=Rossi}
+        IO.println(map); // {345211=Bianchi, 243001=Verdi, 345122=Rossi}
         map.put(243001, "Neri"); // Rimpiazza Verdi
         final Map<String,Integer> map2 = Map.of("foo", 5, "bar", 7);
 
         for(final Map.Entry<String,Integer> entry: map2.entrySet()) { // modo prestante per accedere alle coppie
-            System.out.println("Chiave: " + entry.getKey() + ", Valore: " + entry.getValue());
+            IO.println("Chiave: " + entry.getKey() + ", Valore: " + entry.getValue());
         }
         for (final int i: map.keySet()) { // modo per accedere alle sole chiavi
-            System.out.println("Chiave: " + i);
+            IO.println("Chiave: " + i);
         }
         for (final String s: map.values()) { // modo per accedere ai soli valori
-            System.out.println("Valore: " + s);
+            IO.println("Valore: " + s);
         }
     }
 }

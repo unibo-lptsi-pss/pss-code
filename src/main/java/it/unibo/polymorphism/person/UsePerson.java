@@ -1,4 +1,5 @@
 package it.unibo.polymorphism.person;
+import java.io.IO;
 
 public class UsePerson {
 
@@ -14,7 +15,7 @@ public class UsePerson {
 		};
 		
 		for (final var p: people){
-			System.out.println(p.getName()+": "+p);
+			IO.println(p.getName()+": "+p);
 		}
 	}
 }

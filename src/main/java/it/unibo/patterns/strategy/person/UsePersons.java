@@ -1,4 +1,5 @@
 package it.unibo.patterns.strategy.person;
+import java.io.IO;
 
 public class UsePersons {
     public static void sortPeople(Person[] ps, PersonCompareStrategy comparator) {
@@ -18,7 +19,7 @@ public class UsePersons {
 
     public static void printPeople(Person[] people) {
         for(int i = 0; i < people.length; i++) {
-            System.out.println("" + i + ") " + people[i].getName() + " " + people[i].getSurname() + 
+            IO.println("" + i + ") " + people[i].getName() + " " + people[i].getSurname() + 
                 " - " + people[i].getYearOfBirth());
         }
     }
@@ -30,7 +31,7 @@ public class UsePersons {
         Person[] people = new Person[] { p1, p2, p3 };
         sortPeople(people, new PersonComparatorByAge());
         printPeople(people);
-        System.out.println("\n");
+        IO.println("\n");
         sortPeople(people, new PersonComparatorByFullName());
         printPeople(people);
     }

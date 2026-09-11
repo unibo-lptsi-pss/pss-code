@@ -2,6 +2,7 @@ package it.unibo.io.files;
 
 import java.io.*;
 import java.util.*;
+import java.io.IO;
 
 public class ListOnFile {
 	public static void main(String[] args) throws IOException {
@@ -11,7 +12,7 @@ public class ListOnFile {
 		for (final byte b : ar) {
 			list.add(b);
 		}
-		System.out.println("Prima: " + list);
+		IO.println("Prima: " + list);
 		try (
 			final OutputStream file = new FileOutputStream(UseFile.FILE_NAME)
 		) {
@@ -27,7 +28,7 @@ public class ListOnFile {
 			while ((c = file2.read()) != -1) { // Ricarico da file
 				list2.add((byte) c);
 			}
-			System.out.println("Dopo: " + list2);
+			IO.println("Dopo: " + list2);
 		}
 	}
 }

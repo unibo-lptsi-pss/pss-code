@@ -1,6 +1,7 @@
 package it.unibo.advancedmechanisms.enums.en2;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseEnum {
 	public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class UseEnum {
 		list.add(Regione.EMILIA_ROMAGNA);
 		
 		for (final Regione r: list){
-			System.out.println(r.toString());
+			IO.println(r.toString());
 		}
 	}
 }

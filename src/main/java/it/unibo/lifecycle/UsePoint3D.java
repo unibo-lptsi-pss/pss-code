@@ -1,4 +1,5 @@
 package it.unibo.lifecycle;
+import java.io.IO;
 
 class UsePoint3D {
 	static void main(String[] s) {
@@ -15,6 +16,6 @@ class UsePoint3D {
 		Point3D max = Points.max(array);
 
 		// stampo
-		System.out.println("Max: " + max.x + "," + max.y + "," + max.z);
+		IO.println("Max: " + max.x + "," + max.y + "," + max.z);
 	}
 }

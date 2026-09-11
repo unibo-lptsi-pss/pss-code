@@ -2,6 +2,7 @@ package it.unibo.multithread;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.io.IO;
 
 public class UnboundedBuffer<T> {
     private Queue<T> buffer = new LinkedList<>();
@@ -26,14 +27,14 @@ class UnboundedBufferDemo {
         Thread producer = new Thread(() -> {
             for (int i = 10; i < 20; i++) {
                 buffer.put(i);
-                System.out.println("Produced: " + i);
+                IO.println("Produced: " + i);
             }
         });
         Thread consumer = new Thread(() -> {
             for (int i = 0; i < 20; i++) {
                 try {
                     var item = buffer.take();
-                    System.out.println("Consumed: " + item);
+                    IO.println("Consumed: " + item);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

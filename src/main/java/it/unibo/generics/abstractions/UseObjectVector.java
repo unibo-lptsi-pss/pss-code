@@ -1,4 +1,5 @@
 package it.unibo.generics.abstractions;
+import java.io.IO;
 
 public class UseObjectVector {
 	public static void main(String[] s) {
@@ -12,7 +13,7 @@ public class UseObjectVector {
 			(Integer) vobj.getElementAt(vobj.getLength() - 1)
 					+ (Integer) vobj.getElementAt(vobj.getLength() - 2));
 		}
-		System.out.println(vobj);
+		IO.println(vobj);
 		// |1|1|2|3|5|8|13|21|34|55|89|144|233|..
 		// 377|610|987|1597|2584|4181|6765|10946|17711|
 
@@ -22,7 +23,7 @@ public class UseObjectVector {
 		vobj2.addElement("di");
 		vobj2.addElement("vettore");
 		vobj2.addElement(new Object());
-		System.out.println(vobj2);
+		IO.println(vobj2);
 		String str = (String) vobj2.getElementAt(1); // "di"
 		// String str2 = (String)vobj2.getElementAt(3); // Exception
 	}

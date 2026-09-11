@@ -22,5 +22,5 @@ void main() throws InterruptedException {
     thread2.start();
     thread2.join();
     thread1.join();
-    System.out.println("Final counter value: " + shared.getCounter());
+    IO.println("Final counter value: " + shared.getCounter());
 }

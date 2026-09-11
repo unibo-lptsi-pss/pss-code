@@ -1,4 +1,5 @@
 package it.unibo.lifecycle;
+import java.io.IO;
 
 public class MagicExample {
 	// Put 100 into a constant and give it a name!!
@@ -12,6 +13,6 @@ public class MagicExample {
 			array[i] = Math.random();
 			sum = sum + array[i];
 		}
-		System.out.println("Somma " + sum);
+		IO.println("Somma " + sum);
 	}
 }

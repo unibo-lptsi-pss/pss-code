@@ -1,6 +1,7 @@
 package it.unibo.lifecycle;
 
 import java.util.Random;
+import java.io.IO;
 
 public class GuessMyNumberApp {
 	
@@ -11,18 +12,18 @@ public class GuessMyNumberApp {
 	public static void main(String[] args) {
 		int number = new Random().nextInt(MAX_GUESS - MIN_GUESS) + MIN_GUESS;
 		for (int i = 1; i <= ATTEMPTS; i++){
-			System.out.println("Attempt no. "+i);
-			System.out.println("Insert your guess.. ");
+			IO.println("Attempt no. "+i);
+			IO.println("Insert your guess.. ");
 			int guess = Integer.parseInt(System.console().readLine());
 			if (guess == number){
-				System.out.println("You won!!");
+				IO.println("You won!!");
 				return;
 			} else if (guess > number){
-				System.out.println("Your guess is greater..");
+				IO.println("Your guess is greater..");
 			} else {
-				System.out.println("Your guess is lower..");
+				IO.println("Your guess is lower..");
 			}
 		}
-		System.out.println("Sorry, you lost!");
+		IO.println("Sorry, you lost!");
 	}
 }

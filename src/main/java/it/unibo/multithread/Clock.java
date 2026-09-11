@@ -1,4 +1,5 @@
 package it.unibo.multithread;
+import java.io.IO;
 
 public class Clock implements Runnable {
     private String name;
@@ -10,7 +11,7 @@ public class Clock implements Runnable {
     @Override
     public void run() {
         while(true) {
-            System.out.println("Clock " + name + ": " + System.currentTimeMillis());
+            IO.println("Clock " + name + ": " + System.currentTimeMillis());
             try {
                 Thread.sleep(this.amount); // Pausa di 1 secondo
             } catch (InterruptedException e) {

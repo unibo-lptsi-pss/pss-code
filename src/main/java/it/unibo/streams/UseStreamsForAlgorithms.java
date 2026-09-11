@@ -3,10 +3,11 @@ package it.unibo.streams;
 import java.util.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.*;
+import java.io.IO;
 
 public class UseStreamsForAlgorithms {
 	public static void main(String[] args) {
-		System.out.println(
+		IO.println(
 			LongStream.iterate(2, x->x+1)
 				.filter((i)->LongStream.range(2, i/2+1).noneMatch(j -> i%j==0))
 				.limit(1000)
@@ -14,12 +15,12 @@ public class UseStreamsForAlgorithms {
 				.collect(Collectors.joining(",","[","]")));
 		
 		final Random r = new Random();
-		System.out.println(
+		IO.println(
 			IntStream.range(0, 10000)
 				.map(i->r.nextInt(6)+r.nextInt(6)+2)
 				.boxed() // da int a Integer
 				.collect(groupingBy(x->x, collectingAndThen(counting(), d->d/10000.0))));
-		System.out.println(
+		IO.println(
 			"Prova di testo: indovina cosa produce la seguente computazione......"
 				.chars()
 				.mapToObj(x->String.valueOf((char)x))

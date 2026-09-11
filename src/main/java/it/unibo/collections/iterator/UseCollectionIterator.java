@@ -1,6 +1,7 @@
 package it.unibo.collections.iterator;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseCollectionIterator {
     static void main() {
@@ -13,7 +14,7 @@ public class UseCollectionIterator {
         // Stampo con un foreach
         int count = 0;
         for (final double d: list) {
-            System.out.println(++count + " " + d);
+            IO.println(++count + " " + d);
         }
         // 1 0.10230513602737423
         // 2 0.4318582138894327

@@ -1,11 +1,12 @@
 package it.unibo.patterns.factory.domo;
+import java.io.IO;
 
 public class UseTwoLampsDeviceNaive {
 	public static void main(String[] args) {
 		TwoLampsDeviceNaive td = new TwoLampsDeviceNaive();
 		td.switchOnBoth();
-		System.out.println(td);
+		IO.println(td);
 		td.ecoMode();
-		System.out.println(td);
+		IO.println(td);
 	}
 }

@@ -1,6 +1,7 @@
 package it.unibo.collections.collection;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseListIterator {
 	public static void main(String[] s) {
@@ -12,12 +13,12 @@ public class UseListIterator {
 		while (it.hasNext()) {
 			it.add(it.next() + 1);
 		}
-		System.out.println(list); // [1, 2, 3, ..., 10, 11,12]
+		IO.println(list); // [1, 2, 3, ..., 10, 11,12]
 		while (it.hasPrevious()) {
-			System.out.println("back: " + it.previous()); // 12 .. 1
+			IO.println("back: " + it.previous()); // 12 .. 1
 		}
 		for (final int i : list.subList(3, 10)) {
-			System.out.println("forth - 3 to 10: " + i); // 4 .. 10
+			IO.println("forth - 3 to 10: " + i); // 4 .. 10
 		}
 	}
 }

@@ -2,6 +2,7 @@ package it.unibo.streams;
 
 import java.util.*;
 import java.util.stream.*;
+import java.io.IO;
 
 import static java.util.stream.Collectors.*;
 
@@ -21,14 +22,14 @@ public class TestConcurrency {
 			l.stream().collect(Collectors.averagingDouble(x->x))
 		);
 		time = System.currentTimeMillis() - time;
-		System.out.println("Time: " + time);
+		IO.println("Time: " + time);
 		
 		time2 = System.currentTimeMillis();
 		IntStream.range(0,STEPS).forEach(i -> 
 			l.stream().parallel().collect(Collectors.averagingDouble(x->x))
 		);
 		time2 = System.currentTimeMillis() - time2;
-		System.out.println("Time2: " + time2);
-		System.out.println("Gain: " + (((double)time)/time2));
+		IO.println("Time2: " + time2);
+		IO.println("Gain: " + (((double)time)/time2));
 	}
 }

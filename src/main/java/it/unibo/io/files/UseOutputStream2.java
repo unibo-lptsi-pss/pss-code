@@ -2,6 +2,7 @@ package it.unibo.io.files;
 
 import java.io.*;
 import java.util.Random;
+import java.io.IO;
 
 // Due varianti: uso di java.io.File, e catch con try-with-resources
 public class UseOutputStream2 {
@@ -22,7 +23,7 @@ public class UseOutputStream2 {
                 output.write(b);
             }
         } catch (final IOException e){
-            System.out.println("Something went wrong!");
+            IO.println("Something went wrong!");
         }
     }
 }

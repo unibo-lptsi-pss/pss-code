@@ -1,6 +1,7 @@
 package it.unibo.collections.generic.list;
 
 import java.util.*;
+import java.io.IO;
 
 public class UseLinkedList {
     private static final String ELEMS = "A B C D E F G H I L M";
@@ -22,6 +23,6 @@ public class UseLinkedList {
             }
         }
         final String[] str = llist.toArray(new String[0]);
-        System.out.println(Arrays.toString(str));
+        IO.println(Arrays.toString(str));
     }
 }

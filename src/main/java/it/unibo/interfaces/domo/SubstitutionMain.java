@@ -1,12 +1,13 @@
 package it.unibo.interfaces.domo;
+import java.io.IO;
 
 public class SubstitutionMain {
     public static void workOnDevice(Device d) { 
-        System.out.println(d.toString() + " è " + (d.isSwitchedOn() ? "acceso" : "spento")); 
+        IO.println(d.toString() + " è " + (d.isSwitchedOn() ? "acceso" : "spento")); 
     }
 
     public static void workOnLamp(Lamp l) { 
-        System.out.println(l.toString() + " è " + (l.isSwitchedOn() ? "acceso" : "spento")); 
+        IO.println(l.toString() + " è " + (l.isSwitchedOn() ? "acceso" : "spento")); 
     }
 
     public static void main(String[] args) {
