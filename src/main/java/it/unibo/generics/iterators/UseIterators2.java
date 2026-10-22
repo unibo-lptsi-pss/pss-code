@@ -14,8 +14,11 @@ public class UseIterators2 {
 
     public static void main(String[] s) {
         final Iterator<Integer> iterator = new IntRangeIterator(5, 10);
-        final LList<String> list = new LList<>("a", new LList<>("b", new LList<>("c", new LList<>("d", null))));
-        final Iterator<String> iterator2 = new LListIterator<>(list);
+        final Vector<String> strings = new Vector<>();
+        strings.addElement("a");
+        strings.addElement("b");
+        strings.addElement("c");
+        final Iterator<String> iterator2 = new VectorIterator<>(strings);
         final Vector<Calendar> vector = new Vector<>();
         vector.addElement(new GregorianCalendar());
         vector.addElement(new GregorianCalendar());
