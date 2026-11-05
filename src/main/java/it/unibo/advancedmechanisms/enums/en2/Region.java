@@ -1,6 +1,6 @@
 package it.unibo.advancedmechanisms.enums.en2;
 
-public enum Regione {
+public enum Region {
 	ABRUZZO, BASILICATA, CALABRIA, CAMPANIA, EMILIA_ROMAGNA, 
 	FRIULI_VENEZIA_GIULIA, LAZIO, LIGURIA, LOMBARDIA, MARCHE, 
 	MOLISE, PIEMONTE, PUGLIA, SARDEGNA, SICILIA, TOSCANA,
@@ -9,6 +9,6 @@ public enum Regione {
 
 class A {
 	void m() {
-		Regione r = Regione.ABRUZZO;
+		Region r = Region.ABRUZZO;
 	}
 }

@@ -1,12 +1,12 @@
 package it.unibo.advancedmechanisms.enums.en4;
 import java.io.IO;
 
-public class UseZona {
+public class UseZone {
 	public static void main(String[] args) {
-		for (Regione r: Regione.Zona.NORD.getRegioni()){
+		for (Region r : Region.Zone.NORTH.getRegions()) {
 			IO.println("toString "+r); 
 			// Emilia Romagna,...,Veneto
-			IO.println("nome "+r.name());
+			IO.println("name "+r.name());
 			// EMILIA_ROMAGNA,...,VENETO
 			IO.println("---");
 		}

@@ -5,13 +5,13 @@ import java.io.IO;
 
 public class UseEnum {
 	public static void main(String[] args) {
-		final List<Regione> list = new ArrayList<>();
+		final List<Region> list = new ArrayList<>();
 		
-		list.add(Regione.LOMBARDIA);
-		list.add(Regione.PIEMONTE);
-		list.add(Regione.EMILIA_ROMAGNA);
+		list.add(Region.LOMBARDIA);
+		list.add(Region.PIEMONTE);
+		list.add(Region.EMILIA_ROMAGNA);
 		
-		for (final Regione r: list){
+		for (final Region r : list) {
 			IO.println(r.toString());
 		}
 	}
